@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -25,18 +25,29 @@
             <objects>
                 <controller id="Cyj-uJ-RaS" customClass="RecommendedBeersController" customModule="Beer_Watch_WatchKit_Extension">
                     <items>
+                        <label alignment="center" text="Rate your beers" id="5zC-R3-QsW"/>
                         <table alignment="left" id="TPP-b1-zye">
                             <items>
                                 <tableRow identifier="beerRow" id="5AD-3D-pEJ" customClass="RecommendedBeerRowController" customModule="Beer_Watch_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="151.5" alignment="left" layout="vertical" id="goL-vR-ZPh">
+                                    <group key="rootItem" width="1" height="78.5" alignment="left" layout="vertical" id="goL-vR-ZPh">
                                         <items>
-                                            <label width="1" alignment="center" text="Label" textAlignment="center" id="N0P-d3-lLu"/>
-                                            <imageView width="1" height="120" alignment="center" contentMode="scaleAspectFit" id="HDp-3o-Lh0"/>
+                                            <group width="1" alignment="left" id="pOP-qw-Jpp">
+                                                <items>
+                                                    <imageView width="0.25" height="74" alignment="left" contentMode="scaleAspectFit" id="HDp-3o-Lh0"/>
+                                                    <group width="1" alignment="left" layout="vertical" id="bOZ-4O-3zK">
+                                                        <items>
+                                                            <label width="1" alignment="left" text="Bauhaus" textAlignment="left" id="N0P-d3-lLu"/>
+                                                            <label width="1" alignment="left" text="SKY-FIVE!" id="8Ay-r7-4m9"/>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="rowDescription" destination="N0P-d3-lLu" id="rtI-fS-QHy"/>
-                                        <outlet property="rowIcon" destination="HDp-3o-Lh0" id="UpD-TJ-vS6"/>
+                                        <outlet property="beerIcon" destination="HDp-3o-Lh0" id="j1J-Yz-Cey"/>
+                                        <outlet property="beerName" destination="8Ay-r7-4m9" id="b3l-GX-Xr9"/>
+                                        <outlet property="breweryName" destination="N0P-d3-lLu" id="ecP-Qy-SXN"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -47,7 +58,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="345.25"/>
+            <point key="canvasLocation" x="468" y="332"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

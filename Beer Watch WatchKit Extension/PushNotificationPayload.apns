@@ -9,8 +9,12 @@
     
     "WatchKit Simulator Actions": [
         {
-            "title": "First Button",
-            "identifier": "firstButtonAction"
+            "title": "Dashboard",
+            "identifier": "dashboard"
+        },
+        {
+             "title": "Beers",
+             "identifier": "beers"
         }
     ],
     

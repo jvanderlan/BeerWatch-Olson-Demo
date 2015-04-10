@@ -10,8 +10,8 @@ import WatchKit
 import Foundation
 
 class RecommendedBeerRowController : NSObject {
-    
-    @IBOutlet weak var rowDescription: WKInterfaceLabel!
-    @IBOutlet weak var rowIcon: WKInterfaceImage!
-    
+        
+    @IBOutlet weak var breweryName: WKInterfaceLabel!
+    @IBOutlet weak var beerName: WKInterfaceLabel!
+    @IBOutlet weak var beerIcon: WKInterfaceImage!
 }

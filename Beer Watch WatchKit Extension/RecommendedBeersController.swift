@@ -29,9 +29,10 @@ class RecommendedBeersController: WKInterfaceController {
                 var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
                 var beer = results[i] as Beer
                 
-                row.rowDescription.setText(beer.name)
+                row.beerName.setText(beer.name)
+                row.breweryName.setText(beer.brewer)
                 
-                self.loadImage(beer.imageLocation, forImageView: row.rowIcon)
+                self.loadImage(beer.imageLocation, forImageView: row.beerIcon)
             }
             
             self.recomendedBeers = results

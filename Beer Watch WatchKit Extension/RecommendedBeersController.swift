@@ -26,7 +26,7 @@ class RecommendedBeersController: WKInterfaceController {
             self.beerTable.setNumberOfRows(results.count, withRowType: "beerRow")
             
             for var i = 0; i<self.beerTable.numberOfRows; i++ {
-                var row = self.beerTable.rowControllerAtIndex(i) as RecommendedBeerRowController
+                var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
                 var beer = results[i] as Beer
                 
                 row.rowDescription.setText(beer.name)

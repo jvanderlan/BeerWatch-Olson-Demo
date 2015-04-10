@@ -54,34 +54,34 @@ class BeerRecommendationRepository {
     }
     
     
-    func FindBeersLike(beerId: NSString, completionHandler: (results: Array<Beer>) -> ()) {
+    func FindBeersLike(beerId: String, completionHandler: (results: Array<Beer>) -> ()) {
         
         let query = "searchFields=hops,hopProfile,beerFamily&moreLikeThis=" + beerId
         
         Search(query,
             mappingCallback: {(searchResult: NSDictionary) -> SearchResult in
             var beer = Beer(
-                searchScore: searchResult["@search.score"] as Double,
-                id: searchResult["id"] as String,
-                name: searchResult["name"] as String,
-                imageLocation: searchResult["imageLocation"] as String,
-                url: searchResult["url"] as String,
-                event: searchResult["event"] as String,
-                description: searchResult["description"] as String,
+                searchScore: searchResult["@search.score"] as! Double,
+                id: searchResult["id"] as! String,
+                name: searchResult["name"] as! String,
+                imageLocation: searchResult["imageLocation"] as! String,
+                url: searchResult["url"] as! String,
+                event: searchResult["event"] as! String,
+                description: searchResult["description"] as! String,
                 beerFamilies: Array<String>(),
                 hops: Array<String>(),
                 flavorProfiles: Array<String>(),
-                brewer: searchResult["brewer"] as String,
-                abv: searchResult["abv"] as Double,
-                ibu: searchResult["ibu"] as Double,
-                srm: searchResult["srm"] as Double)
+                brewer: searchResult["brewer"] as! String,
+                abv: searchResult["abv"] as! Double,
+                ibu: searchResult["ibu"] as! Double,
+                srm: searchResult["srm"] as! Double)
             
             return beer;
             },
             completionHandler: {(mappedResults: Array<SearchResult>) -> () in
                 var beers = Array<Beer>()
                 for m in mappedResults {
-                    beers.append(m as Beer)
+                    beers.append(m as! Beer)
                 }
                 completionHandler(results: beers)
             }

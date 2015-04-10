@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3013F0011AD85AE2003AF22B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3013F0001AD85AE2003AF22B /* AppDelegate.swift */; };
+		3013F0031AD85AE2003AF22B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3013F0021AD85AE2003AF22B /* ViewController.swift */; };
+		3013F0061AD85AE2003AF22B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3013F0041AD85AE2003AF22B /* Main.storyboard */; };
+		3013F0081AD85AE2003AF22B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3013F0071AD85AE2003AF22B /* Images.xcassets */; };
+		3013F00B1AD85AE2003AF22B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3013F0091AD85AE2003AF22B /* LaunchScreen.xib */; };
+		3013F0171AD85AE2003AF22B /* Beer_WatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3013F0161AD85AE2003AF22B /* Beer_WatchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3013F0111AD85AE2003AF22B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3013EFF31AD85AE2003AF22B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3013EFFA1AD85AE2003AF22B;
+			remoteInfo = "Beer Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3013EFFB1AD85AE2003AF22B /* Beer Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beer Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3013EFFF1AD85AE2003AF22B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3013F0001AD85AE2003AF22B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3013F0021AD85AE2003AF22B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3013F0051AD85AE2003AF22B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3013F0071AD85AE2003AF22B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3013F00A1AD85AE2003AF22B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3013F0101AD85AE2003AF22B /* Beer WatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beer WatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3013F0151AD85AE2003AF22B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3013F0161AD85AE2003AF22B /* Beer_WatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer_WatchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3013EFF81AD85AE2003AF22B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3013F00D1AD85AE2003AF22B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3013EFF21AD85AE2003AF22B = {
+			isa = PBXGroup;
+			children = (
+				3013EFFD1AD85AE2003AF22B /* Beer Watch */,
+				3013F0131AD85AE2003AF22B /* Beer WatchTests */,
+				3013EFFC1AD85AE2003AF22B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3013EFFC1AD85AE2003AF22B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3013EFFB1AD85AE2003AF22B /* Beer Watch.app */,
+				3013F0101AD85AE2003AF22B /* Beer WatchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3013EFFD1AD85AE2003AF22B /* Beer Watch */ = {
+			isa = PBXGroup;
+			children = (
+				3013F0001AD85AE2003AF22B /* AppDelegate.swift */,
+				3013F0021AD85AE2003AF22B /* ViewController.swift */,
+				3013F0041AD85AE2003AF22B /* Main.storyboard */,
+				3013F0071AD85AE2003AF22B /* Images.xcassets */,
+				3013F0091AD85AE2003AF22B /* LaunchScreen.xib */,
+				3013EFFE1AD85AE2003AF22B /* Supporting Files */,
+			);
+			path = "Beer Watch";
+			sourceTree = "<group>";
+		};
+		3013EFFE1AD85AE2003AF22B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3013EFFF1AD85AE2003AF22B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3013F0131AD85AE2003AF22B /* Beer WatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				3013F0161AD85AE2003AF22B /* Beer_WatchTests.swift */,
+				3013F0141AD85AE2003AF22B /* Supporting Files */,
+			);
+			path = "Beer WatchTests";
+			sourceTree = "<group>";
+		};
+		3013F0141AD85AE2003AF22B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3013F0151AD85AE2003AF22B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3013EFFA1AD85AE2003AF22B /* Beer Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3013F01A1AD85AE2003AF22B /* Build configuration list for PBXNativeTarget "Beer Watch" */;
+			buildPhases = (
+				3013EFF71AD85AE2003AF22B /* Sources */,
+				3013EFF81AD85AE2003AF22B /* Frameworks */,
+				3013EFF91AD85AE2003AF22B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Beer Watch";
+			productName = "Beer Watch";
+			productReference = 3013EFFB1AD85AE2003AF22B /* Beer Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3013F00F1AD85AE2003AF22B /* Beer WatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3013F01D1AD85AE2003AF22B /* Build configuration list for PBXNativeTarget "Beer WatchTests" */;
+			buildPhases = (
+				3013F00C1AD85AE2003AF22B /* Sources */,
+				3013F00D1AD85AE2003AF22B /* Frameworks */,
+				3013F00E1AD85AE2003AF22B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3013F0121AD85AE2003AF22B /* PBXTargetDependency */,
+			);
+			name = "Beer WatchTests";
+			productName = "Beer WatchTests";
+			productReference = 3013F0101AD85AE2003AF22B /* Beer WatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3013EFF31AD85AE2003AF22B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Vanderlan, Jeremiah";
+				TargetAttributes = {
+					3013EFFA1AD85AE2003AF22B = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					3013F00F1AD85AE2003AF22B = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 3013EFFA1AD85AE2003AF22B;
+					};
+				};
+			};
+			buildConfigurationList = 3013EFF61AD85AE2003AF22B /* Build configuration list for PBXProject "Beer Watch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3013EFF21AD85AE2003AF22B;
+			productRefGroup = 3013EFFC1AD85AE2003AF22B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3013EFFA1AD85AE2003AF22B /* Beer Watch */,
+				3013F00F1AD85AE2003AF22B /* Beer WatchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3013EFF91AD85AE2003AF22B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3013F0061AD85AE2003AF22B /* Main.storyboard in Resources */,
+				3013F00B1AD85AE2003AF22B /* LaunchScreen.xib in Resources */,
+				3013F0081AD85AE2003AF22B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3013F00E1AD85AE2003AF22B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3013EFF71AD85AE2003AF22B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3013F0031AD85AE2003AF22B /* ViewController.swift in Sources */,
+				3013F0011AD85AE2003AF22B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3013F00C1AD85AE2003AF22B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3013F0171AD85AE2003AF22B /* Beer_WatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3013F0121AD85AE2003AF22B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3013EFFA1AD85AE2003AF22B /* Beer Watch */;
+			targetProxy = 3013F0111AD85AE2003AF22B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3013F0041AD85AE2003AF22B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3013F0051AD85AE2003AF22B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3013F0091AD85AE2003AF22B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3013F00A1AD85AE2003AF22B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3013F0181AD85AE2003AF22B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3013F0191AD85AE2003AF22B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3013F01B1AD85AE2003AF22B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Beer Watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3013F01C1AD85AE2003AF22B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Beer Watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3013F01E1AD85AE2003AF22B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Beer WatchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beer Watch.app/Beer Watch";
+			};
+			name = Debug;
+		};
+		3013F01F1AD85AE2003AF22B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Beer WatchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beer Watch.app/Beer Watch";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3013EFF61AD85AE2003AF22B /* Build configuration list for PBXProject "Beer Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3013F0181AD85AE2003AF22B /* Debug */,
+				3013F0191AD85AE2003AF22B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3013F01A1AD85AE2003AF22B /* Build configuration list for PBXNativeTarget "Beer Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3013F01B1AD85AE2003AF22B /* Debug */,
+				3013F01C1AD85AE2003AF22B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3013F01D1AD85AE2003AF22B /* Build configuration list for PBXNativeTarget "Beer WatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3013F01E1AD85AE2003AF22B /* Debug */,
+				3013F01F1AD85AE2003AF22B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3013EFF31AD85AE2003AF22B /* Project object */;
+}

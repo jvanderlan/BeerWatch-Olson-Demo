@@ -20,6 +20,11 @@
 		731D8BE71AD8627800BAAA27 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 731D8BE51AD8627800BAAA27 /* Interface.storyboard */; };
 		731D8BE91AD8627800BAAA27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 731D8BE81AD8627800BAAA27 /* Images.xcassets */; };
 		731D8BEC1AD8627800BAAA27 /* Beer Watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 731D8BD11AD8627700BAAA27 /* Beer Watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		731D8BF71AD8696E00BAAA27 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BF51AD8696E00BAAA27 /* Beer.swift */; };
+		731D8BF81AD8696E00BAAA27 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BF61AD8696E00BAAA27 /* SearchResult.swift */; };
+		731D8BFB1AD8697C00BAAA27 /* BeerRecommendationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BFA1AD8697C00BAAA27 /* BeerRecommendationRepository.swift */; };
+		731D8BFE1AD8698C00BAAA27 /* RecommendedBeerRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BFC1AD8698C00BAAA27 /* RecommendedBeerRowController.swift */; };
+		731D8BFF1AD8698C00BAAA27 /* RecommendedBeersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BFD1AD8698C00BAAA27 /* RecommendedBeersController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,11 @@
 		731D8BE41AD8627800BAAA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		731D8BE61AD8627800BAAA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		731D8BE81AD8627800BAAA27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		731D8BF51AD8696E00BAAA27 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		731D8BF61AD8696E00BAAA27 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		731D8BFA1AD8697C00BAAA27 /* BeerRecommendationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerRecommendationRepository.swift; sourceTree = "<group>"; };
+		731D8BFC1AD8698C00BAAA27 /* RecommendedBeerRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedBeerRowController.swift; sourceTree = "<group>"; };
+		731D8BFD1AD8698C00BAAA27 /* RecommendedBeersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedBeersController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +181,10 @@
 		731D8BD21AD8627700BAAA27 /* Beer Watch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				731D8BFC1AD8698C00BAAA27 /* RecommendedBeerRowController.swift */,
+				731D8BFD1AD8698C00BAAA27 /* RecommendedBeersController.swift */,
+				731D8BF91AD8697C00BAAA27 /* Repositories */,
+				731D8BF41AD8696E00BAAA27 /* Models */,
 				731D8BD61AD8627700BAAA27 /* InterfaceController.swift */,
 				731D8BD81AD8627700BAAA27 /* NotificationController.swift */,
 				731D8BDA1AD8627700BAAA27 /* Images.xcassets */,
@@ -204,6 +218,23 @@
 				731D8BE41AD8627800BAAA27 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		731D8BF41AD8696E00BAAA27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				731D8BF51AD8696E00BAAA27 /* Beer.swift */,
+				731D8BF61AD8696E00BAAA27 /* SearchResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		731D8BF91AD8697C00BAAA27 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				731D8BFA1AD8697C00BAAA27 /* BeerRecommendationRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,7 +415,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731D8BFB1AD8697C00BAAA27 /* BeerRecommendationRepository.swift in Sources */,
 				731D8BD91AD8627700BAAA27 /* NotificationController.swift in Sources */,
+				731D8BFF1AD8698C00BAAA27 /* RecommendedBeersController.swift in Sources */,
+				731D8BF71AD8696E00BAAA27 /* Beer.swift in Sources */,
+				731D8BF81AD8696E00BAAA27 /* SearchResult.swift in Sources */,
+				731D8BFE1AD8698C00BAAA27 /* RecommendedBeerRowController.swift in Sources */,
 				731D8BD71AD8627700BAAA27 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,13 @@
 		3013F0081AD85AE2003AF22B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3013F0071AD85AE2003AF22B /* Images.xcassets */; };
 		3013F00B1AD85AE2003AF22B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3013F0091AD85AE2003AF22B /* LaunchScreen.xib */; };
 		3013F0171AD85AE2003AF22B /* Beer_WatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3013F0161AD85AE2003AF22B /* Beer_WatchTests.swift */; };
+		731D8BD71AD8627700BAAA27 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BD61AD8627700BAAA27 /* InterfaceController.swift */; };
+		731D8BD91AD8627700BAAA27 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BD81AD8627700BAAA27 /* NotificationController.swift */; };
+		731D8BDB1AD8627700BAAA27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 731D8BDA1AD8627700BAAA27 /* Images.xcassets */; };
+		731D8BDF1AD8627800BAAA27 /* Beer Watch WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 731D8BDE1AD8627800BAAA27 /* Beer Watch WatchKit App.app */; };
+		731D8BE71AD8627800BAAA27 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 731D8BE51AD8627800BAAA27 /* Interface.storyboard */; };
+		731D8BE91AD8627800BAAA27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 731D8BE81AD8627800BAAA27 /* Images.xcassets */; };
+		731D8BEC1AD8627800BAAA27 /* Beer Watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 731D8BD11AD8627700BAAA27 /* Beer Watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +30,35 @@
 			remoteGlobalIDString = 3013EFFA1AD85AE2003AF22B;
 			remoteInfo = "Beer Watch";
 		};
+		731D8BE01AD8627800BAAA27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3013EFF31AD85AE2003AF22B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 731D8BDD1AD8627800BAAA27;
+			remoteInfo = "Beer Watch WatchKit App";
+		};
+		731D8BEA1AD8627800BAAA27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3013EFF31AD85AE2003AF22B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 731D8BD01AD8627700BAAA27;
+			remoteInfo = "Beer Watch WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		731D8BF31AD8627800BAAA27 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				731D8BEC1AD8627800BAAA27 /* Beer Watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3013EFFB1AD85AE2003AF22B /* Beer Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beer Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +71,16 @@
 		3013F0101AD85AE2003AF22B /* Beer WatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beer WatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3013F0151AD85AE2003AF22B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3013F0161AD85AE2003AF22B /* Beer_WatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer_WatchTests.swift; sourceTree = "<group>"; };
+		731D8BD11AD8627700BAAA27 /* Beer Watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Beer Watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		731D8BD41AD8627700BAAA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		731D8BD51AD8627700BAAA27 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		731D8BD61AD8627700BAAA27 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		731D8BD81AD8627700BAAA27 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		731D8BDA1AD8627700BAAA27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		731D8BDE1AD8627800BAAA27 /* Beer Watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beer Watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		731D8BE41AD8627800BAAA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		731D8BE61AD8627800BAAA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		731D8BE81AD8627800BAAA27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +98,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		731D8BCE1AD8627700BAAA27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +113,8 @@
 			children = (
 				3013EFFD1AD85AE2003AF22B /* Beer Watch */,
 				3013F0131AD85AE2003AF22B /* Beer WatchTests */,
+				731D8BD21AD8627700BAAA27 /* Beer Watch WatchKit Extension */,
+				731D8BE21AD8627800BAAA27 /* Beer Watch WatchKit App */,
 				3013EFFC1AD85AE2003AF22B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +124,8 @@
 			children = (
 				3013EFFB1AD85AE2003AF22B /* Beer Watch.app */,
 				3013F0101AD85AE2003AF22B /* Beer WatchTests.xctest */,
+				731D8BD11AD8627700BAAA27 /* Beer Watch WatchKit Extension.appex */,
+				731D8BDE1AD8627800BAAA27 /* Beer Watch WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +168,44 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		731D8BD21AD8627700BAAA27 /* Beer Watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				731D8BD61AD8627700BAAA27 /* InterfaceController.swift */,
+				731D8BD81AD8627700BAAA27 /* NotificationController.swift */,
+				731D8BDA1AD8627700BAAA27 /* Images.xcassets */,
+				731D8BD31AD8627700BAAA27 /* Supporting Files */,
+			);
+			path = "Beer Watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		731D8BD31AD8627700BAAA27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				731D8BD41AD8627700BAAA27 /* Info.plist */,
+				731D8BD51AD8627700BAAA27 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		731D8BE21AD8627800BAAA27 /* Beer Watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				731D8BE51AD8627800BAAA27 /* Interface.storyboard */,
+				731D8BE81AD8627800BAAA27 /* Images.xcassets */,
+				731D8BE31AD8627800BAAA27 /* Supporting Files */,
+			);
+			path = "Beer Watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		731D8BE31AD8627800BAAA27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				731D8BE41AD8627800BAAA27 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +216,12 @@
 				3013EFF71AD85AE2003AF22B /* Sources */,
 				3013EFF81AD85AE2003AF22B /* Frameworks */,
 				3013EFF91AD85AE2003AF22B /* Resources */,
+				731D8BF31AD8627800BAAA27 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				731D8BEB1AD8627800BAAA27 /* PBXTargetDependency */,
 			);
 			name = "Beer Watch";
 			productName = "Beer Watch";
@@ -150,6 +246,39 @@
 			productReference = 3013F0101AD85AE2003AF22B /* Beer WatchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		731D8BD01AD8627700BAAA27 /* Beer Watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 731D8BF21AD8627800BAAA27 /* Build configuration list for PBXNativeTarget "Beer Watch WatchKit Extension" */;
+			buildPhases = (
+				731D8BCD1AD8627700BAAA27 /* Sources */,
+				731D8BCE1AD8627700BAAA27 /* Frameworks */,
+				731D8BCF1AD8627700BAAA27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				731D8BE11AD8627800BAAA27 /* PBXTargetDependency */,
+			);
+			name = "Beer Watch WatchKit Extension";
+			productName = "Beer Watch WatchKit Extension";
+			productReference = 731D8BD11AD8627700BAAA27 /* Beer Watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		731D8BDD1AD8627800BAAA27 /* Beer Watch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 731D8BF11AD8627800BAAA27 /* Build configuration list for PBXNativeTarget "Beer Watch WatchKit App" */;
+			buildPhases = (
+				731D8BDC1AD8627800BAAA27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Beer Watch WatchKit App";
+			productName = "Beer Watch WatchKit App";
+			productReference = 731D8BDE1AD8627800BAAA27 /* Beer Watch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +294,12 @@
 					3013F00F1AD85AE2003AF22B = {
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = 3013EFFA1AD85AE2003AF22B;
+					};
+					731D8BD01AD8627700BAAA27 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					731D8BDD1AD8627800BAAA27 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -183,6 +318,8 @@
 			targets = (
 				3013EFFA1AD85AE2003AF22B /* Beer Watch */,
 				3013F00F1AD85AE2003AF22B /* Beer WatchTests */,
+				731D8BD01AD8627700BAAA27 /* Beer Watch WatchKit Extension */,
+				731D8BDD1AD8627800BAAA27 /* Beer Watch WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +339,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		731D8BCF1AD8627700BAAA27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				731D8BDB1AD8627700BAAA27 /* Images.xcassets in Resources */,
+				731D8BDF1AD8627800BAAA27 /* Beer Watch WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		731D8BDC1AD8627800BAAA27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				731D8BE71AD8627800BAAA27 /* Interface.storyboard in Resources */,
+				731D8BE91AD8627800BAAA27 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +380,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		731D8BCD1AD8627700BAAA27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				731D8BD91AD8627700BAAA27 /* NotificationController.swift in Sources */,
+				731D8BD71AD8627700BAAA27 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +396,16 @@
 			isa = PBXTargetDependency;
 			target = 3013EFFA1AD85AE2003AF22B /* Beer Watch */;
 			targetProxy = 3013F0111AD85AE2003AF22B /* PBXContainerItemProxy */;
+		};
+		731D8BE11AD8627800BAAA27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 731D8BDD1AD8627800BAAA27 /* Beer Watch WatchKit App */;
+			targetProxy = 731D8BE01AD8627800BAAA27 /* PBXContainerItemProxy */;
+		};
+		731D8BEB1AD8627800BAAA27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 731D8BD01AD8627700BAAA27 /* Beer Watch WatchKit Extension */;
+			targetProxy = 731D8BEA1AD8627800BAAA27 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -250,6 +424,14 @@
 				3013F00A1AD85AE2003AF22B /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		731D8BE51AD8627800BAAA27 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				731D8BE61AD8627800BAAA27 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Beer Watch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Beer Watch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +576,64 @@
 			};
 			name = Release;
 		};
+		731D8BED1AD8627800BAAA27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Beer Watch WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		731D8BEE1AD8627800BAAA27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Beer Watch WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		731D8BEF1AD8627800BAAA27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Beer_Watch_WatchKit_Extension;
+				INFOPLIST_FILE = "Beer Watch WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		731D8BF01AD8627800BAAA27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Beer_Watch_WatchKit_Extension;
+				INFOPLIST_FILE = "Beer Watch WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,12 +653,30 @@
 				3013F01C1AD85AE2003AF22B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3013F01D1AD85AE2003AF22B /* Build configuration list for PBXNativeTarget "Beer WatchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3013F01E1AD85AE2003AF22B /* Debug */,
 				3013F01F1AD85AE2003AF22B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		731D8BF11AD8627800BAAA27 /* Build configuration list for PBXNativeTarget "Beer Watch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				731D8BEF1AD8627800BAAA27 /* Debug */,
+				731D8BF01AD8627800BAAA27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		731D8BF21AD8627800BAAA27 /* Build configuration list for PBXNativeTarget "Beer Watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				731D8BED1AD8627800BAAA27 /* Debug */,
+				731D8BEE1AD8627800BAAA27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -707,6 +707,7 @@
 				731D8BF01AD8627800BAAA27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		731D8BF21AD8627800BAAA27 /* Build configuration list for PBXNativeTarget "Beer Watch WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +716,7 @@
 				731D8BEE1AD8627800BAAA27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

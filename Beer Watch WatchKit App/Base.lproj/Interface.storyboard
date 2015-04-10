@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Beer_Watch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="i0c-6F-ANP">
+                            <connections>
+                                <segue destination="Cyj-uJ-RaS" kind="push" id="YiC-Ba-A3K"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Recommended Beers Controller-->
+        <scene sceneID="u0V-tK-lp4">
+            <objects>
+                <controller id="Cyj-uJ-RaS" customClass="RecommendedBeersController" customModule="Beer_Watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="TPP-b1-zye">
+                            <items>
+                                <tableRow identifier="beerRow" id="5AD-3D-pEJ" customClass="RecommendedBeerRowController" customModule="Beer_Watch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="151.5" alignment="left" layout="vertical" id="goL-vR-ZPh">
+                                        <items>
+                                            <label width="1" alignment="center" text="Label" textAlignment="center" id="N0P-d3-lLu"/>
+                                            <imageView width="1" height="120" alignment="center" contentMode="scaleAspectFit" id="HDp-3o-Lh0"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowDescription" destination="N0P-d3-lLu" id="rtI-fS-QHy"/>
+                                        <outlet property="rowIcon" destination="HDp-3o-Lh0" id="UpD-TJ-vS6"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="beerTable" destination="TPP-b1-zye" id="4q1-s1-ZsE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345.25"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,7 +68,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Beer_Watch_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

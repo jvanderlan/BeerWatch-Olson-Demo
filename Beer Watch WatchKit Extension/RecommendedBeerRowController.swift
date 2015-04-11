@@ -46,6 +46,12 @@ class RecommendedBeerRowController : NSObject {
         
         self.loadImage(beer.imageLocation, forImageView: self.beerIcon)
         
+        toggleStar((beer.rating >= 1), starButton: starOneButton)
+        toggleStar((beer.rating >= 2), starButton: starTwoButton)
+        toggleStar((beer.rating >= 3), starButton: starThreeButton)
+        toggleStar((beer.rating >= 4), starButton: starFourButton)
+        toggleStar((beer.rating >= 5), starButton: starFiveButton)
+        
         rowGroup.setHidden(false)
     }
     

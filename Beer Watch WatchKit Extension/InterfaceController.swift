@@ -27,9 +27,26 @@ class InterfaceController: WKInterfaceController {
         middleGroup.setBackgroundImageNamed("middleArc")
         innerGroup.setBackgroundImageNamed("innerArc")
         
-        outerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,75), duration:duration, repeatCount: 1)
-        middleGroup.startAnimatingWithImagesInRange(NSMakeRange(0,50), duration: duration, repeatCount: 1)
-        innerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,25), duration: duration, repeatCount: 1)
+        self.outerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,75), duration:self.duration, repeatCount: 1)
+        self.middleGroup.startAnimatingWithImagesInRange(NSMakeRange(0,50), duration:self.duration, repeatCount: 1)
+        self.innerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,25), duration:self.duration, repeatCount: 1)
+        
+        /*
+        var repo = BeerRecommendationRepository()
+        
+        repo.FindStats("3", completionHandler: { (result) -> () in
+            
+            var outerCount:Double = 0
+            var middleCount:Double = 0
+            var innerCount:Double = 0
+            
+            if ( result.families.count > 0 ) {
+                outerCount = (Double(result.families[0].count) / Double(result.pourCount))
+                
+            }
+            
+
+        })*/
     }
 
     override func willActivate() {
@@ -46,5 +63,8 @@ class InterfaceController: WKInterfaceController {
         
         return GlobalContants.RecommendedBeerActionType.rate
     }
+    
+
+    
 
 }

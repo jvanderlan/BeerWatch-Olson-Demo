@@ -378,6 +378,8 @@
 		738FDD2B1AD9753D00B02916 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738FDD191AD9753D00B02916 /* RobotoCondensed-Light.ttf */; };
 		738FDD2C1AD9753D00B02916 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738FDD1A1AD9753D00B02916 /* RobotoCondensed-LightItalic.ttf */; };
 		738FDD2D1AD9753D00B02916 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738FDD1B1AD9753D00B02916 /* RobotoCondensed-Regular.ttf */; };
+		73E8A02B1AD9D1370012FF9E /* PourStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E8A02A1AD9D1370012FF9E /* PourStats.swift */; };
+		73E8A02D1AD9D17B0012FF9E /* FamilyPourStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E8A02C1AD9D17B0012FF9E /* FamilyPourStat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -797,6 +799,8 @@
 		738FDD191AD9753D00B02916 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		738FDD1A1AD9753D00B02916 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		738FDD1B1AD9753D00B02916 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		73E8A02A1AD9D1370012FF9E /* PourStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PourStats.swift; sourceTree = "<group>"; };
+		73E8A02C1AD9D17B0012FF9E /* FamilyPourStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyPourStat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1282,6 +1286,8 @@
 				731562721AD9B84500380CF1 /* Pour.swift */,
 				731562741AD9B86100380CF1 /* ApiResult.swift */,
 				731562761AD9C64D00380CF1 /* PourMessage.swift */,
+				73E8A02A1AD9D1370012FF9E /* PourStats.swift */,
+				73E8A02C1AD9D17B0012FF9E /* FamilyPourStat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1870,6 +1876,7 @@
 			files = (
 				733EB5401AD8A18900E95DF9 /* ChooseBeerController.swift in Sources */,
 				731D8BFB1AD8697C00BAAA27 /* BeerRecommendationRepository.swift in Sources */,
+				73E8A02B1AD9D1370012FF9E /* PourStats.swift in Sources */,
 				731562751AD9B86100380CF1 /* ApiResult.swift in Sources */,
 				731D8BD91AD8627700BAAA27 /* NotificationController.swift in Sources */,
 				731562731AD9B84500380CF1 /* Pour.swift in Sources */,
@@ -1882,6 +1889,7 @@
 				731D8BFE1AD8698C00BAAA27 /* RecommendedBeerRowController.swift in Sources */,
 				731D8BD71AD8627700BAAA27 /* InterfaceController.swift in Sources */,
 				73753E5E1AD97B87003146A3 /* Constants.swift in Sources */,
+				73E8A02D1AD9D17B0012FF9E /* FamilyPourStat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

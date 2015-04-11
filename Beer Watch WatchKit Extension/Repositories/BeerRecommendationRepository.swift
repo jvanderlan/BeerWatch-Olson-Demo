@@ -102,6 +102,36 @@ class BeerRecommendationRepository {
         })
     }
     
+    func FindStats(userId: String, completionHandler: (results: PourStats) -> ()) {
+        let query = "/api/user/" + userId + "/stats"
+        
+        ApiCall(query,
+            mappingCallback: {(entityResult: NSDictionary) -> ApiResult in
+                var stats = PourStats()
+                
+                stats.pourCount = entityResult["pour_count"] as! Int;
+                
+                if let pourFamilyEntityResults = entityResult["brewer"] as? NSArray {
+                    for arrayMember in pourFamilyEntityResults {
+                        if let pourFamilyEntityResults = arrayMember as? NSDictionary {
+                            var familyPourStat = FamilyPourStat()
+                            familyPourStat.count = pourFamilyEntityResults["count"] as! Int
+                            familyPourStat.family = pourFamilyEntityResults["family"] as! String
+                            
+                            stats.families.append(familyPourStat)
+                        }
+                    }
+                }
+                
+                return stats;
+            },
+            completionHandler: {(mappedResults: Array<ApiResult>) -> () in
+                var stats = mappedResults[0] as! PourStats
+                completionHandler(results: stats)
+            }
+        )
+    }
+    
     func FindBeer(beerId: String, completionHandler: (results: Beer) -> ()) {
         let query = "/api/beers/" + beerId
         
@@ -249,5 +279,6 @@ class BeerRecommendationRepository {
                 
         })
     }
+    
     
 }

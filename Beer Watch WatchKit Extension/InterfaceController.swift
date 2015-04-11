@@ -12,10 +12,21 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var outerGroup: WKInterfaceGroup!
+    @IBOutlet weak var middleGroup: WKInterfaceGroup!
+    @IBOutlet weak var innerGroup: WKInterfaceGroup!
+    let duration = 1.0
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+        outerGroup.setBackgroundImageNamed("outerArc")
+        middleGroup.setBackgroundImageNamed("middleArc")
+        innerGroup.setBackgroundImageNamed("innerArc")
+        
+        outerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,75), duration:duration, repeatCount: 1)
+        middleGroup.startAnimatingWithImagesInRange(NSMakeRange(0,50), duration: duration, repeatCount: 1)
+        innerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,25), duration: duration, repeatCount: 1)
     }
 
     override func willActivate() {

@@ -5,20 +5,40 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Beer Profile-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Beer_Watch_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" userLabel="Beer Profile" customClass="InterfaceController" customModule="Beer_Watch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Button" id="i0c-6F-ANP">
-                            <connections>
-                                <segue destination="Cyj-uJ-RaS" kind="push" id="YiC-Ba-A3K"/>
-                            </connections>
-                        </button>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="Say-wx-XhA" userLabel="Container">
+                            <items>
+                                <label height="0.20000000000000001" alignment="center" text="Cheers to beers" textAlignment="left" id="Z7g-CT-Kid"/>
+                                <group width="1" height="0.59999999999999998" alignment="left" backgroundImage="outerArc0.png" contentMode="scaleAspectFit" id="HZR-qm-9gJ" userLabel="Outer Arc">
+                                    <items>
+                                        <group width="1" alignment="left" backgroundImage="middleArc0.png" contentMode="scaleAspectFit" id="2Qq-kF-4gT" userLabel="Middle Arc">
+                                            <items>
+                                                <group width="1" height="1" alignment="left" backgroundImage="innerArc0.png" contentMode="scaleAspectFit" id="35H-e2-sSI" userLabel="Inner Arc"/>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.14999999999999999" alignment="left" id="fiV-DQ-dwe" userLabel="Buttons">
+                                    <items>
+                                        <imageView width="0.5" alignment="left" id="FfB-me-qN0" userLabel="Rate"/>
+                                        <imageView width="0.5" alignment="left" id="2E7-AF-lwk" userLabel="Pour"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
                     </items>
+                    <connections>
+                        <outlet property="innerGroup" destination="35H-e2-sSI" id="QSh-rF-y1v"/>
+                        <outlet property="middleGroup" destination="2Qq-kF-4gT" id="tdz-BA-Gui"/>
+                        <outlet property="outerGroup" destination="HZR-qm-9gJ" id="M3C-WA-Z7k"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="349.90000063925982"/>
         </scene>
         <!--Recommended Beers-->
         <scene sceneID="u0V-tK-lp4">

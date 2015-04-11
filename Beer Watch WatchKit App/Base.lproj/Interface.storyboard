@@ -97,7 +97,9 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label width="136" height="72" alignment="left" text="Alert Label" numberOfLines="3" id="IdU-wH-bcW"/>
+                        <label width="136" height="72" alignment="left" text="Alert Label" numberOfLines="3" id="IdU-wH-bcW">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>

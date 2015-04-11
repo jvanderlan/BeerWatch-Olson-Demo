@@ -20,20 +20,20 @@
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--Recommended Beers Controller-->
+        <!--Recommended Beers-->
         <scene sceneID="u0V-tK-lp4">
             <objects>
-                <controller id="Cyj-uJ-RaS" customClass="RecommendedBeersController" customModule="Beer_Watch_WatchKit_Extension">
+                <controller id="Cyj-uJ-RaS" userLabel="Recommended Beers" customClass="RecommendedBeersController" customModule="Beer_Watch_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Rate your beers" id="5zC-R3-QsW"/>
                         <table alignment="left" id="TPP-b1-zye">
                             <items>
                                 <tableRow identifier="beerRow" id="5AD-3D-pEJ" customClass="RecommendedBeerRowController" customModule="Beer_Watch_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="78.5" alignment="left" layout="vertical" id="goL-vR-ZPh">
+                                    <group key="rootItem" width="1" height="78.5" alignment="left" layout="vertical" id="goL-vR-ZPh" userLabel="Row Group">
                                         <items>
-                                            <group width="1" alignment="left" id="pOP-qw-Jpp">
+                                            <group width="1" alignment="left" id="pOP-qw-Jpp" userLabel="Beer Group">
                                                 <items>
-                                                    <imageView width="0.25" height="74" alignment="left" contentMode="scaleAspectFit" id="HDp-3o-Lh0"/>
+                                                    <imageView width="0.25" height="74" alignment="left" contentMode="scaleAspectFit" id="HDp-3o-Lh0" userLabel="Beer Image"/>
                                                     <group width="1" alignment="left" layout="vertical" id="bOZ-4O-3zK">
                                                         <items>
                                                             <label width="1" alignment="left" text="Bauhaus" textAlignment="left" id="N0P-d3-lLu"/>
@@ -58,7 +58,22 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="332"/>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+        <!--Choose Beer-->
+        <scene sceneID="uyF-en-clQ">
+            <objects>
+                <controller id="di6-Az-Uy5" userLabel="Choose Beer">
+                    <items>
+                        <group width="1" alignment="left" id="P41-Mn-c7d">
+                            <items>
+                                <label alignment="left" text="Label" id="KK7-pP-w2k"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="698" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

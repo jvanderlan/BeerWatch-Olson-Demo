@@ -10,6 +10,10 @@ import Foundation
 import WatchKit
 
 struct GlobalContants {
+
+    struct Colors {
+        static let tealColor = UIColor(red: 0.102, green: 0.824, blue: 0.694, alpha: 1) /*#1ad2b1*/
+    }
     
     struct Fonts {
         static let bodyCopy = UIFont(name: "Roboto", size: 12.0)!
@@ -22,8 +26,11 @@ struct GlobalContants {
         static let titleCopyFontAttributes = [NSFontAttributeName : titleCopy]
     }
     
-    struct Colors {
-        static let tealColor = UIColor(red: 0.102, green: 0.824, blue: 0.694, alpha: 1) /*#1ad2b1*/
+    struct RecommendedBeerActionType {
+        static let rate = "rate"
+        static let trending = "trending"
+        static let norm = "norm"
+        static let adventerous = "adventerous"
     }
-    
+
 }

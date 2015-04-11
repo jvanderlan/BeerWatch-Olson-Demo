@@ -13,6 +13,7 @@ import Foundation
 class RecommendedBeersController: WKInterfaceController {
     @IBOutlet weak var titleGroup: WKInterfaceGroup!
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
+    @IBOutlet weak var titleImage: WKInterfaceImage!
     
     var recomendedBeers = Array<Beer>()
     
@@ -21,6 +22,32 @@ class RecommendedBeersController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        var contextString = context as! String
+        
+        if (contextString == GlobalContants.RecommendedBeerActionType.trending) {
+            var titleAttributes = NSAttributedString(string: "Trending", attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
+            self.titleLabel.setAttributedText(titleAttributes)
+            titleImage.setImageNamed("trending")
+            titleImage.setHidden(false)
+        }
+        else if ( contextString == GlobalContants.RecommendedBeerActionType.norm ) {
+            var titleAttributes = NSAttributedString(string: "The norm", attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
+            self.titleLabel.setAttributedText(titleAttributes)
+            titleImage.setImageNamed("the_norm")
+            titleImage.setHidden(false)
+        }
+        else if ( contextString == GlobalContants.RecommendedBeerActionType.adventerous ) {
+            var titleAttributes = NSAttributedString(string: "Adventerous", attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
+            self.titleLabel.setAttributedText(titleAttributes)
+            titleImage.setImageNamed("adventerous")
+            titleImage.setHidden(false)
+        }
+        else {
+            var titleAttributes = NSAttributedString(string: "Rate your beers", attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
+            self.titleLabel.setAttributedText(titleAttributes)
+            titleImage.setHidden(true)
+        }
                 
         let repo = BeerRecommendationRepository()
         
@@ -31,7 +58,9 @@ class RecommendedBeersController: WKInterfaceController {
                 var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
                 var beer = results[i] as Beer
                 
-                row.setBeer(beer)
+                var showRating = contextString == GlobalContants.RecommendedBeerActionType.rate
+                row.setBeer(beer, showRating: showRating)
+                
             }
             
             self.recomendedBeers = results
@@ -79,5 +108,4 @@ class RecommendedBeersController: WKInterfaceController {
             }
         }
     }
-    
 }

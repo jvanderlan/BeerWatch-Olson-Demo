@@ -16,6 +16,7 @@ class RecommendedBeerRowController : NSObject {
     @IBOutlet weak var beerIcon: WKInterfaceImage!
     @IBOutlet weak var beerStyle: WKInterfaceLabel!
     
+    @IBOutlet weak var starGroup: WKInterfaceGroup!
     @IBOutlet weak var starOneButton: WKInterfaceButton!
     @IBOutlet weak var starTwoButton: WKInterfaceButton!
     @IBOutlet weak var starThreeButton: WKInterfaceButton!
@@ -28,7 +29,7 @@ class RecommendedBeerRowController : NSObject {
         
     }
     
-    func setBeer(beer: Beer) {
+    func setBeer(beer: Beer, showRating: Bool) {
         self.beer = beer
         
         self.beerName.setText(beer.name)
@@ -42,6 +43,8 @@ class RecommendedBeerRowController : NSObject {
         
         var beerStyleAttributes = NSAttributedString(string: beer.style, attributes: GlobalContants.Fonts.bodyCopyBoldFontAttributes)
         self.beerStyle.setAttributedText(beerStyleAttributes)
+        
+        self.starGroup.setHidden(!showRating)
         
         self.loadImage(beer.imageLocation, forImageView: self.beerIcon)
     }

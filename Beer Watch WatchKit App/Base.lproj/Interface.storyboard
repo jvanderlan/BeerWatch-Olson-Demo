@@ -42,16 +42,24 @@
                                 </group>
                                 <group width="1" height="0.20000000000000001" alignment="left" id="fiV-DQ-dwe" userLabel="Buttons">
                                     <items>
-                                        <button width="24" height="24" alignment="left" verticalAlignment="center" backgroundImage="rate.png" id="oXa-hJ-kJ7">
-                                            <connections>
-                                                <segue destination="Cyj-uJ-RaS" kind="push" id="slL-CE-OtA"/>
-                                            </connections>
-                                        </button>
-                                        <button width="24" height="24" alignment="right" verticalAlignment="center" backgroundImage="beer.png" id="fBN-hX-bKZ">
-                                            <connections>
-                                                <segue destination="6Yj-Il-upA" kind="push" id="8mK-Mu-UBy"/>
-                                            </connections>
-                                        </button>
+                                        <group width="0.5" alignment="left" id="ENa-IJ-oai">
+                                            <items>
+                                                <button width="24" height="24" alignment="center" verticalAlignment="center" backgroundImage="rate.png" id="oXa-hJ-kJ7">
+                                                    <connections>
+                                                        <segue destination="Cyj-uJ-RaS" kind="push" identifier="rate" id="BPc-a2-kHB"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
+                                        <group width="0.5" alignment="left" id="123-DW-zez">
+                                            <items>
+                                                <button width="24" height="24" alignment="center" verticalAlignment="center" backgroundImage="beer.png" id="fBN-hX-bKZ">
+                                                    <connections>
+                                                        <segue destination="6Yj-Il-upA" kind="push" id="8mK-Mu-UBy"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
                                     </items>
                                 </group>
                             </items>
@@ -67,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="220" y="349.90000063925982"/>
         </scene>
-        <!--Choose Beer Mode-->
+        <!--Find Beer-->
         <scene sceneID="iXy-JZ-sDB">
             <objects>
-                <controller id="6Yj-Il-upA" userLabel="Choose Beer Mode">
+                <controller id="6Yj-Il-upA" userLabel="Find Beer" customClass="FindBeerController" customModule="Beer_Watch_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="How dould you like to search for a new beer?" textAlignment="left" numberOfLines="2" id="Nxg-z3-iFZ">
                             <color key="textColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,7 +101,7 @@
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                     </group>
                                     <connections>
-                                        <segue destination="Cyj-uJ-RaS" kind="push" id="xX4-gn-3yk"/>
+                                        <segue destination="Cyj-uJ-RaS" kind="push" identifier="trending" id="qf6-X5-MRX"/>
                                     </connections>
                                 </button>
                                 <button alignment="center" id="epn-M9-xCe" userLabel="The Norm">
@@ -111,7 +119,7 @@
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                     </group>
                                     <connections>
-                                        <segue destination="Cyj-uJ-RaS" kind="push" id="4uR-a5-n6Y"/>
+                                        <segue destination="Cyj-uJ-RaS" kind="push" identifier="norm" id="Jvx-ka-qcb"/>
                                     </connections>
                                 </button>
                                 <button alignment="center" id="XqJ-B6-BVp" userLabel="Adventerous">
@@ -129,7 +137,7 @@
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                     </group>
                                     <connections>
-                                        <segue destination="Cyj-uJ-RaS" kind="push" id="THG-VO-ke6"/>
+                                        <segue destination="Cyj-uJ-RaS" kind="push" identifier="adventerous" id="I4q-Nc-3pD"/>
                                     </connections>
                                 </button>
                             </items>
@@ -144,8 +152,9 @@
             <objects>
                 <controller id="Cyj-uJ-RaS" userLabel="Recommended Beers" customClass="RecommendedBeersController" customModule="Beer_Watch_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="9YM-St-Jo6" userLabel="Title Group">
+                        <group alignment="center" id="9YM-St-Jo6" userLabel="Title Group">
                             <items>
+                                <imageView width="16" height="16" alignment="left" id="Wkh-pf-o2d"/>
                                 <label alignment="center" text="Rate your beers" id="5zC-R3-QsW">
                                     <color key="textColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
@@ -219,6 +228,7 @@
                                         <outlet property="breweryName" destination="N0P-d3-lLu" id="ecP-Qy-SXN"/>
                                         <outlet property="starFiveButton" destination="Mxl-sk-SLK" id="0kZ-t9-UHz"/>
                                         <outlet property="starFourButton" destination="3fl-qP-SEf" id="DPU-yl-DLM"/>
+                                        <outlet property="starGroup" destination="bUn-rh-o3F" id="rSi-HF-4ul"/>
                                         <outlet property="starOneButton" destination="ojp-eM-8Hw" id="LC1-Sm-sin"/>
                                         <outlet property="starThreeButton" destination="5im-H9-bvH" id="xoH-Jt-kdE"/>
                                         <outlet property="starTwoButton" destination="PTk-hs-VUF" id="rQm-Yy-fEc"/>
@@ -231,6 +241,7 @@
                     <connections>
                         <outlet property="beerTable" destination="TPP-b1-zye" id="4q1-s1-ZsE"/>
                         <outlet property="titleGroup" destination="9YM-St-Jo6" id="kGy-xB-zXF"/>
+                        <outlet property="titleImage" destination="Wkh-pf-o2d" id="OQf-WA-QdG"/>
                         <outlet property="titleLabel" destination="5zC-R3-QsW" id="uxF-h7-IlU"/>
                     </connections>
                 </controller>
@@ -307,7 +318,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xX4-gn-3yk"/>
+        <segue reference="I4q-Nc-3pD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

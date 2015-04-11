@@ -60,23 +60,24 @@ class BeerRecommendationRepository {
         
         Search(query,
             mappingCallback: {(searchResult: NSDictionary) -> SearchResult in
-            var beer = Beer(
-                searchScore: searchResult["@search.score"] as! Double,
-                id: searchResult["id"] as! String,
-                name: searchResult["name"] as! String,
-                imageLocation: searchResult["imageLocation"] as! String,
-                url: searchResult["url"] as! String,
-                event: searchResult["event"] as! String,
-                description: searchResult["description"] as! String,
-                beerFamilies: Array<String>(),
-                hops: Array<String>(),
-                flavorProfiles: Array<String>(),
-                brewer: searchResult["brewer"] as! String,
-                abv: searchResult["abv"] as! Double,
-                ibu: searchResult["ibu"] as! Double,
-                srm: searchResult["srm"] as! Double)
+                var beer = Beer()
+                
+                beer.searchScore = searchResult["@search.score"] as! Double;
+                beer.id = searchResult["id"] as! String;
+                beer.name = searchResult["name"] as! String;
+                beer.imageLocation = searchResult["imageLocation"] as! String;
+                beer.url =  searchResult["url"] as! String;
+                beer.event = searchResult["event"] as! String;
+                beer.description = searchResult["description"] as! String;
+                beer.beerFamilies = Array<String>();
+                beer.hops = Array<String>();
+                beer.flavorProfiles = Array<String>();
+                beer.brewer = searchResult["brewer"] as! String;
+                beer.abv = searchResult["abv"] as! Double;
+                beer.ibu = searchResult["ibu"] as! Double;
+                beer.srm = searchResult["srm"] as! Double;
             
-            return beer;
+                return beer;
             },
             completionHandler: {(mappedResults: Array<SearchResult>) -> () in
                 var beers = Array<Beer>()

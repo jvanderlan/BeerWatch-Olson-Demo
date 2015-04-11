@@ -25,6 +25,7 @@
 		731D8BFB1AD8697C00BAAA27 /* BeerRecommendationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BFA1AD8697C00BAAA27 /* BeerRecommendationRepository.swift */; };
 		731D8BFE1AD8698C00BAAA27 /* RecommendedBeerRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BFC1AD8698C00BAAA27 /* RecommendedBeerRowController.swift */; };
 		731D8BFF1AD8698C00BAAA27 /* RecommendedBeersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BFD1AD8698C00BAAA27 /* RecommendedBeersController.swift */; };
+		733EB5401AD8A18900E95DF9 /* ChooseBeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733EB53F1AD8A18900E95DF9 /* ChooseBeerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		731D8BFA1AD8697C00BAAA27 /* BeerRecommendationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerRecommendationRepository.swift; sourceTree = "<group>"; };
 		731D8BFC1AD8698C00BAAA27 /* RecommendedBeerRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedBeerRowController.swift; sourceTree = "<group>"; };
 		731D8BFD1AD8698C00BAAA27 /* RecommendedBeersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedBeersController.swift; sourceTree = "<group>"; };
+		733EB53F1AD8A18900E95DF9 /* ChooseBeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBeerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 		731D8BD21AD8627700BAAA27 /* Beer Watch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				733EB53F1AD8A18900E95DF9 /* ChooseBeerController.swift */,
 				731D8BFC1AD8698C00BAAA27 /* RecommendedBeerRowController.swift */,
 				731D8BFD1AD8698C00BAAA27 /* RecommendedBeersController.swift */,
 				731D8BF91AD8697C00BAAA27 /* Repositories */,
@@ -415,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				733EB5401AD8A18900E95DF9 /* ChooseBeerController.swift in Sources */,
 				731D8BFB1AD8697C00BAAA27 /* BeerRecommendationRepository.swift in Sources */,
 				731D8BD91AD8627700BAAA27 /* NotificationController.swift in Sources */,
 				731D8BFF1AD8698C00BAAA27 /* RecommendedBeersController.swift in Sources */,

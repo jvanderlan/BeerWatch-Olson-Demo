@@ -58,6 +58,13 @@ class RecommendedBeersController: WKInterfaceController {
         
     }
     
+    override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
+        
+        let beer = self.recomendedBeers[rowIndex]
+        
+        return beer
+    }
+    
     
     func loadImage(url:String, forImageView: WKInterfaceImage) {
         // load image

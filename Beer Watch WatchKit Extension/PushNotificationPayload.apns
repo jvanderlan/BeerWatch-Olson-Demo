@@ -1,20 +1,16 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
-            "title": "Optional title"
+            "body": "Help us give you suggestions.  You have 5 beers to rank.",
+            "title": "Cheers"
         },
         "category": "myCategory"
     },
     
     "WatchKit Simulator Actions": [
         {
-            "title": "Dashboard",
+            "title": "Happy hour starts",
             "identifier": "dashboard"
-        },
-        {
-             "title": "Beers",
-             "identifier": "beers"
         }
     ],
     

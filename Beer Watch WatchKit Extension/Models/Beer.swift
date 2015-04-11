@@ -8,19 +8,19 @@
 
 import Foundation
 
-struct Beer : SearchResult {
-    var searchScore: Double
-    var id: String
-    var name: String
-    var imageLocation: String
-    var url: String
-    var event: String
-    var description: String
-    var beerFamilies: Array<String>
-    var hops: Array<String>
-    var flavorProfiles: Array<String>
-    var brewer: String
-    var abv: Double
-    var ibu: Double
-    var srm: Double
+class Beer : SearchResult, AnyObject {
+    var searchScore: Double = 0.0
+    var id: String = ""
+    var name: String = ""
+    var imageLocation: String = ""
+    var url: String = ""
+    var event: String = ""
+    var description: String = ""
+    var beerFamilies: Array<String> = []
+    var hops: Array<String> = []
+    var flavorProfiles: Array<String> = []
+    var brewer: String = ""
+    var abv: Double = 0.0
+    var ibu: Double = 0.0
+    var srm: Double = 0.0
 }

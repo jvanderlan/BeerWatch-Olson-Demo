@@ -48,6 +48,7 @@
                                         <outlet property="beerIcon" destination="HDp-3o-Lh0" id="j1J-Yz-Cey"/>
                                         <outlet property="beerName" destination="8Ay-r7-4m9" id="b3l-GX-Xr9"/>
                                         <outlet property="breweryName" destination="N0P-d3-lLu" id="ecP-Qy-SXN"/>
+                                        <segue destination="di6-Az-Uy5" kind="push" id="miK-oI-wpg"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -63,14 +64,30 @@
         <!--Choose Beer-->
         <scene sceneID="uyF-en-clQ">
             <objects>
-                <controller id="di6-Az-Uy5" userLabel="Choose Beer">
+                <controller id="di6-Az-Uy5" userLabel="Choose Beer" customClass="ChooseBeerController" customModule="Beer_Watch_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="P41-Mn-c7d">
+                        <group width="1" alignment="left" layout="vertical" id="P41-Mn-c7d">
                             <items>
-                                <label alignment="left" text="Label" id="KK7-pP-w2k"/>
+                                <label alignment="left" text="Your suggested beer for your 4 o'clock happy hour is:" textAlignment="left" numberOfLines="2" id="KK7-pP-w2k"/>
+                                <label alignment="left" text="Bauhaus SKY-FIVE!" id="LFL-Xk-g0d"/>
+                                <group width="1" alignment="left" id="dsd-1p-WUp" userLabel="Beer Group">
+                                    <items>
+                                        <imageView alignment="left" id="k2p-2m-N3n"/>
+                                        <group width="0.5" alignment="left" layout="vertical" id="3jJ-33-JFq" userLabel="Rate Buttons">
+                                            <items>
+                                                <button width="1" alignment="left" title="Y" id="1FI-ic-zvQ"/>
+                                                <button width="1" alignment="left" title="N" id="diL-hD-VWx"/>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="beerImage" destination="k2p-2m-N3n" id="yWH-Jq-MbL"/>
+                        <outlet property="breweryAndBeerName" destination="LFL-Xk-g0d" id="PW4-iM-oFg"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="698" y="345"/>
@@ -80,7 +97,7 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <label width="136" height="72" alignment="left" text="Alert Label" numberOfLines="3" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
@@ -99,4 +116,5 @@
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -22,11 +22,7 @@ class InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        var titleAttributes = NSAttributedString(string: "Cheers to beers", attributes: GlobalContants.Fonts.titleCopyFontAttributes)
-        titleLabel.setAttributedText(titleAttributes)
-        titleLabel.setTextColor(GlobalContants.Colors.tealColor)
-        
+                
         outerGroup.setBackgroundImageNamed("outerArc")
         middleGroup.setBackgroundImageNamed("middleArc")
         innerGroup.setBackgroundImageNamed("innerArc")

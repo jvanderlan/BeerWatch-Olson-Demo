@@ -21,11 +21,7 @@ class RecommendedBeersController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        var titleAttributes = NSAttributedString(string: "Rate your beers", attributes: GlobalContants.Fonts.titleCopyFontAttributes)
-        titleLabel.setAttributedText(titleAttributes)
-        titleLabel.setTextColor(GlobalContants.Colors.tealColor)
-        
+                
         let repo = BeerRecommendationRepository()
         
         repo.FindBeersLike("beer_summit_saga", completionHandler: {(results: Array<Beer>) -> () in

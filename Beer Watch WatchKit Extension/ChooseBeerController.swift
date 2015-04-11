@@ -19,16 +19,6 @@ class ChooseBeerController : WKInterfaceController {
         super.awakeWithContext(context)
         
         let beer = context as! Beer
-        
-        var titleAttributes = NSAttributedString(string: "ENJOY!", attributes: GlobalContants.Fonts.titleCopyFontAttributes)
-        titleLabel.setAttributedText(titleAttributes)
-        titleLabel.setTextColor(GlobalContants.Colors.tealColor)
-        
-        var pourAnotherAttributes = NSAttributedString(string: "Pour me another", attributes: GlobalContants.Fonts.titleCopyFontAttributes)
-        pourAnotherLabel.setAttributedText(pourAnotherAttributes)
-        
-        var rateAttributes = NSAttributedString(string: "Rank your beers", attributes: GlobalContants.Fonts.titleCopyFontAttributes)
-        rateBeersLabel.setAttributedText(rateAttributes)
     }
     
     override func willActivate() {

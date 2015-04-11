@@ -4,6 +4,21 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </mutableArray>
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Beer Profile-->
         <scene sceneID="aou-V4-d1y">
@@ -13,7 +28,8 @@
                         <group width="1" height="1" alignment="left" layout="vertical" id="Say-wx-XhA" userLabel="Container">
                             <items>
                                 <label height="0.20000000000000001" alignment="center" text="Cheers to beers" textAlignment="left" id="Z7g-CT-Kid">
-                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                    <color key="textColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 </label>
                                 <group width="1" height="0.55000000000000004" alignment="left" backgroundImage="outerArc0.png" contentMode="scaleAspectFit" layout="vertical" id="HZR-qm-9gJ" userLabel="Outer Arc">
                                     <items>
@@ -31,7 +47,11 @@
                                                 <segue destination="Cyj-uJ-RaS" kind="push" id="slL-CE-OtA"/>
                                             </connections>
                                         </button>
-                                        <button width="24" height="24" alignment="right" verticalAlignment="center" backgroundImage="beer.png" id="fBN-hX-bKZ"/>
+                                        <button width="24" height="24" alignment="right" verticalAlignment="center" backgroundImage="beer.png" id="fBN-hX-bKZ">
+                                            <connections>
+                                                <segue destination="6Yj-Il-upA" kind="push" id="8mK-Mu-UBy"/>
+                                            </connections>
+                                        </button>
                                     </items>
                                 </group>
                             </items>
@@ -47,6 +67,78 @@
             </objects>
             <point key="canvasLocation" x="220" y="349.90000063925982"/>
         </scene>
+        <!--Choose Beer Mode-->
+        <scene sceneID="iXy-JZ-sDB">
+            <objects>
+                <controller id="6Yj-Il-upA" userLabel="Choose Beer Mode">
+                    <items>
+                        <label alignment="center" text="How dould you like to search for a new beer?" textAlignment="left" numberOfLines="2" id="Nxg-z3-iFZ">
+                            <color key="textColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                        </label>
+                        <group width="1" height="0.75" alignment="left" layout="vertical" id="Lqc-je-MOh" userLabel="Search Types">
+                            <items>
+                                <button alignment="center" id="Qfm-FN-vDd" userLabel="Trending">
+                                    <group key="contentGroup" width="0.80000000000000004" height="0.29999999999999999" alignment="left" id="NVb-dc-ENG">
+                                        <items>
+                                            <group width="0.80000000000000004" height="0.90000000000000002" alignment="center" verticalAlignment="center" id="Q24-yT-Tch" userLabel="Padding">
+                                                <items>
+                                                    <label alignment="left" verticalAlignment="center" text="Trending" id="4jA-Tg-KsO">
+                                                        <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                                    </label>
+                                                    <imageView width="16" height="16" alignment="right" verticalAlignment="center" image="trending.png" id="xSl-Sk-tGK"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <segue destination="Cyj-uJ-RaS" kind="push" id="xX4-gn-3yk"/>
+                                    </connections>
+                                </button>
+                                <button alignment="center" id="epn-M9-xCe" userLabel="The Norm">
+                                    <group key="contentGroup" width="0.80000000000000004" height="0.29999999999999999" alignment="left" id="6gS-BU-3tY">
+                                        <items>
+                                            <group width="0.80000000000000004" height="0.90000000000000002" alignment="center" verticalAlignment="center" id="i9Q-ZH-l0u" userLabel="Padding">
+                                                <items>
+                                                    <label alignment="left" verticalAlignment="center" text="The norm" id="69O-MK-pjO">
+                                                        <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                                    </label>
+                                                    <imageView width="16" height="16" alignment="right" verticalAlignment="center" image="the_norm.png" id="uhb-RF-04V"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <segue destination="Cyj-uJ-RaS" kind="push" id="4uR-a5-n6Y"/>
+                                    </connections>
+                                </button>
+                                <button alignment="center" id="XqJ-B6-BVp" userLabel="Adventerous">
+                                    <group key="contentGroup" width="0.80000000000000004" height="0.29999999999999999" alignment="left" id="W1c-Wo-qeV">
+                                        <items>
+                                            <group width="0.80000000000000004" height="0.90000000000000002" alignment="center" verticalAlignment="center" id="RcE-eg-0PP" userLabel="Padding">
+                                                <items>
+                                                    <label alignment="left" verticalAlignment="center" text="Adventerous" id="BGk-Qm-Gbd">
+                                                        <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                                    </label>
+                                                    <imageView width="16" height="16" alignment="right" verticalAlignment="center" image="adventerous.png" id="axZ-XN-cXv"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <segue destination="Cyj-uJ-RaS" kind="push" id="THG-VO-ke6"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="472" y="73"/>
+        </scene>
         <!--Recommended Beers-->
         <scene sceneID="u0V-tK-lp4">
             <objects>
@@ -55,7 +147,8 @@
                         <group width="1" alignment="left" id="9YM-St-Jo6" userLabel="Title Group">
                             <items>
                                 <label alignment="center" text="Rate your beers" id="5zC-R3-QsW">
-                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                    <color key="textColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 </label>
                             </items>
                         </group>
@@ -152,7 +245,8 @@
                         <group width="1" height="1" alignment="left" layout="vertical" id="P41-Mn-c7d">
                             <items>
                                 <label height="0.10000000000000001" alignment="center" text="ENJOY!" textAlignment="left" id="KK7-pP-w2k">
-                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                    <color key="textColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="12"/>
                                 </label>
                                 <group width="1" height="0.90000000000000002" alignment="left" verticalAlignment="center" layout="vertical" id="dsd-1p-WUp" userLabel="Beer Group">
                                     <items>
@@ -160,14 +254,16 @@
                                             <items>
                                                 <button width="24" height="24" alignment="center" backgroundImage="beer.png" id="1FI-ic-zvQ"/>
                                                 <label width="1" alignment="left" text="Pour me another" textAlignment="center" id="vnz-dM-PhZ">
-                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                 </label>
                                             </items>
                                         </group>
                                         <group width="1" height="0.5" alignment="left" verticalAlignment="center" layout="vertical" id="W33-e8-HYL" userLabel="Rate">
                                             <items>
                                                 <button width="24" height="24" alignment="center" backgroundImage="rate.png" id="diL-hD-VWx"/>
-                                                <label alignment="center" text="Rate your beers" textAlignment="center" id="mvh-A8-7VG"/>
+                                                <label alignment="center" text="Rate your beers" textAlignment="center" id="mvh-A8-7VG">
+                                                    <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                </label>
                                             </items>
                                         </group>
                                     </items>
@@ -210,5 +306,8 @@
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xX4-gn-3yk"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

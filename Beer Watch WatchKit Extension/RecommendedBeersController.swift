@@ -30,57 +30,33 @@ class RecommendedBeersController: WKInterfaceController {
             self.titleLabel.setAttributedText(titleAttributes)
             titleImage.setImageNamed("trending")
             titleImage.setHidden(false)
+            
+            loadAllBeers(contextString)
         }
         else if ( contextString == GlobalContants.RecommendedBeerActionType.norm ) {
             var titleAttributes = NSAttributedString(string: "The norm", attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
             self.titleLabel.setAttributedText(titleAttributes)
             titleImage.setImageNamed("the_norm")
             titleImage.setHidden(false)
+            
+            loadAllBeers(contextString)
         }
         else if ( contextString == GlobalContants.RecommendedBeerActionType.adventerous ) {
             var titleAttributes = NSAttributedString(string: "Adventerous", attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
             self.titleLabel.setAttributedText(titleAttributes)
             titleImage.setImageNamed("adventerous")
             titleImage.setHidden(false)
+            
+            loadAllBeers(contextString)
         }
         else {
             var titleAttributes = NSAttributedString(string: "Rate your beers", attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
             self.titleLabel.setAttributedText(titleAttributes)
             titleImage.setHidden(true)
+            
+            loadPours(contextString)
         }
-                
-        let repo = BeerRecommendationRepository()
         
-        /*
-        repo.FindBeersLike("beer_summit_saga", completionHandler: {(results: Array<Beer>) -> () in
-            self.beerTable.setNumberOfRows(results.count, withRowType: "beerRow")
-            
-            for var i = 0; i<self.beerTable.numberOfRows; i++ {
-                var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
-                var beer = results[i] as Beer
-                
-                var showRating = contextString == GlobalContants.RecommendedBeerActionType.rate
-                row.setBeer(beer, showRating: showRating)
-                
-            }
-            
-            self.recomendedBeers = results
-        })*/
-        
-        repo.FindAllBeers { (results) -> () in
-            self.beerTable.setNumberOfRows(results.count, withRowType: "beerRow")
-            
-            for var i = 0; i<self.beerTable.numberOfRows; i++ {
-                var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
-                var beer = results[i] as Beer
-                
-                var showRating = contextString == GlobalContants.RecommendedBeerActionType.rate
-                row.setBeer(beer, showRating: showRating)
-                
-            }
-            
-            self.recomendedBeers = results
-        }
     }
     
     override func willActivate() {
@@ -107,6 +83,44 @@ class RecommendedBeersController: WKInterfaceController {
         let beer = self.recomendedBeers[rowIndex]
         
         return beer
+    }
+    
+    func loadAllBeers(contextString: String) {
+        let repo = BeerRecommendationRepository()
+        
+        repo.FindAllBeers { (results) -> () in
+            self.beerTable.setNumberOfRows(results.count, withRowType: "beerRow")
+            
+            for var i = 0; i<self.beerTable.numberOfRows; i++ {
+                var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
+                var beer = results[i] as Beer
+                
+                var showRating = contextString == GlobalContants.RecommendedBeerActionType.rate
+                row.setBeer(beer, showRating: showRating)
+            }
+            
+            self.recomendedBeers = results
+        }
+    }
+    
+    
+    func loadPours(contextString: String) {
+        let repo = BeerRecommendationRepository()
+        
+        repo.FindPours("3", completionHandler: { (results) -> () in
+            self.beerTable.setNumberOfRows(results.count, withRowType: "beerRow")
+            
+            for var i = 0; i<self.beerTable.numberOfRows; i++ {
+                var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
+
+                var pour = results[i] as Pour
+                
+                var showRating = contextString == GlobalContants.RecommendedBeerActionType.rate
+                row.setPour(pour, showRating: showRating)
+            }
+            
+            //self.recomendedBeers = results
+        })
     }
     
     

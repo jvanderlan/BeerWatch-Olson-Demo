@@ -54,8 +54,8 @@ class BeerRecommendationRepository {
     }
     
     func ApiCall(pathAndQuery: String,
-                 mappingCallback: (entityResult: NSDictionary) -> SearchResult,
-                 completionHandler: (results: Array<SearchResult>) -> ())  {
+                 mappingCallback: (entityResult: NSDictionary) -> ApiResult,
+                 completionHandler: (results: Array<ApiResult>) -> ())  {
                     
         var url = "http://localhost:3000" + pathAndQuery
         
@@ -71,14 +71,23 @@ class BeerRecommendationRepository {
             completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
                 
                 var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
-                let jsonResult: NSArray! =  NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSArray
+                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error)
                 
-                var mappedResults = Array<SearchResult>()
+                var mappedResults = Array<ApiResult>()
                 
                 if (jsonResult != nil) {
                     
-                    for result in jsonResult {
-                        if let entityResult = result as? NSDictionary {
+                    if let jsonResultArray = jsonResult as? NSArray {
+                        for result in jsonResultArray {
+                            if let entityResult = result as? NSDictionary {
+                                var mappedEntity = mappingCallback(entityResult: entityResult)
+                            
+                                mappedResults.append(mappedEntity)
+                            }
+                        }
+                    }
+                    else {
+                        if let entityResult = jsonResult as? NSDictionary {
                             var mappedEntity = mappingCallback(entityResult: entityResult)
                             
                             mappedResults.append(mappedEntity)
@@ -92,13 +101,12 @@ class BeerRecommendationRepository {
                 completionHandler(results: mappedResults)
         })
     }
-
-    func FindAllBeers(completionHandler: (results: Array<Beer>) -> ()) {
-        
-        let query = "/api/beers"
+    
+    func FindBeer(beerId: String, completionHandler: (results: Beer) -> ()) {
+        let query = "/api/beers/" + beerId
         
         ApiCall(query,
-            mappingCallback: {(entityResult: NSDictionary) -> SearchResult in
+            mappingCallback: {(entityResult: NSDictionary) -> ApiResult in
                 var beer = Beer()
                 
                 beer.id = entityResult["id"] as! String;
@@ -116,12 +124,69 @@ class BeerRecommendationRepository {
                 
                 return beer;
             },
-            completionHandler: {(mappedResults: Array<SearchResult>) -> () in
+            completionHandler: {(mappedResults: Array<ApiResult>) -> () in
+                var beer = mappedResults[0] as! Beer
+                completionHandler(results: beer)
+            }
+        )
+    }
+
+    func FindAllBeers(completionHandler: (results: Array<Beer>) -> ()) {
+        
+        let query = "/api/beers"
+        
+        ApiCall(query,
+            mappingCallback: {(entityResult: NSDictionary) -> ApiResult in
+                var beer = Beer()
+                
+                beer.id = entityResult["id"] as! String;
+                beer.name = entityResult["name"] as! String;
+                beer.imageLocation = entityResult["image_url"] as! String
+                beer.style = entityResult["beerFamily"] as! String
+                
+                if let brewerEntityResult = entityResult["brewer"] as? NSDictionary {
+                    beer.brewer = Brewer()
+                    beer.brewer.name = brewerEntityResult["name"] as! String
+                    beer.brewer.locationState = brewerEntityResult["location_state"] as! String
+                    beer.brewer.locationCity = brewerEntityResult["location_city"] as! String
+                    beer.brewer.locationCountry = brewerEntityResult["location_country"] as! String
+                }
+                
+                return beer;
+            },
+            completionHandler: {(mappedResults: Array<ApiResult>) -> () in
                 var beers = Array<Beer>()
                 for m in mappedResults {
                     beers.append(m as! Beer)
                 }
                 completionHandler(results: beers)
+            }
+        )
+    }
+    
+    func FindPours(userId:String, completionHandler: (results: Array<Pour>) -> ()) {
+        let query = "/api/user/" + userId + "/pour"
+        
+        ApiCall(query,
+            mappingCallback: {(entityResult: NSDictionary) -> ApiResult in
+                var pour = Pour()
+                
+                pour.type = entityResult["type"] as! String;
+                pour.userId = entityResult["user_id"] as! String;
+                pour.beerId = entityResult["beer_id"] as! String
+                
+                if let var rating = entityResult["rating"] as? Int {
+                    pour.rating = rating
+                }
+                
+                return pour;
+            },
+            completionHandler: {(mappedResults: Array<ApiResult>) -> () in
+                var pours = Array<Pour>()
+                for m in mappedResults {
+                    pours.append(m as! Pour)
+                }
+                completionHandler(results: pours)
             }
         )
     }
@@ -160,6 +225,29 @@ class BeerRecommendationRepository {
                 completionHandler(results: beers)
             }
         )
+    }
+    
+    func RateBeer(userId: String, beerId: String, rating: Int) -> () {
+        var url = "http://localhost:3000//api/user/" + userId + "/pour/" + beerId
+        
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "PUT"
+        request.addValue("application/json", forHTTPHeaderField: "content-type")
+        
+        var message = NSDictionary(objectsAndKeys: rating, "rating", NSDate().timeIntervalSince1970, "poured_on")
+        
+        var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+        let jsonBody = NSJSONSerialization.dataWithJSONObject(message, options: NSJSONWritingOptions.PrettyPrinted, error: error)
+        
+        request.HTTPBody = jsonBody
+        
+        NSURLConnection.sendAsynchronousRequest(
+            request,
+            queue: NSOperationQueue(),
+            completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+                
+        })
     }
     
 }

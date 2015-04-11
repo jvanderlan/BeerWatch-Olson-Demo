@@ -320,6 +320,9 @@
 		7305DB981AD8DE2A003A9621 /* rate.png in Resources */ = {isa = PBXBuildFile; fileRef = 7305DB961AD8DE2A003A9621 /* rate.png */; };
 		7305DB9B1AD966FE003A9621 /* blank_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 7305DB991AD966FE003A9621 /* blank_star.png */; };
 		7305DB9C1AD966FE003A9621 /* full_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 7305DB9A1AD966FE003A9621 /* full_star.png */; };
+		731562731AD9B84500380CF1 /* Pour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731562721AD9B84500380CF1 /* Pour.swift */; };
+		731562751AD9B86100380CF1 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731562741AD9B86100380CF1 /* ApiResult.swift */; };
+		731562771AD9C64D00380CF1 /* PourMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731562761AD9C64D00380CF1 /* PourMessage.swift */; };
 		731D8BD71AD8627700BAAA27 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BD61AD8627700BAAA27 /* InterfaceController.swift */; };
 		731D8BD91AD8627700BAAA27 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D8BD81AD8627700BAAA27 /* NotificationController.swift */; };
 		731D8BDB1AD8627700BAAA27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 731D8BDA1AD8627700BAAA27 /* Images.xcassets */; };
@@ -733,6 +736,9 @@
 		7305DB961AD8DE2A003A9621 /* rate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rate.png; sourceTree = "<group>"; };
 		7305DB991AD966FE003A9621 /* blank_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_star.png; sourceTree = "<group>"; };
 		7305DB9A1AD966FE003A9621 /* full_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = full_star.png; sourceTree = "<group>"; };
+		731562721AD9B84500380CF1 /* Pour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pour.swift; sourceTree = "<group>"; };
+		731562741AD9B86100380CF1 /* ApiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
+		731562761AD9C64D00380CF1 /* PourMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PourMessage.swift; sourceTree = "<group>"; };
 		731D8BD11AD8627700BAAA27 /* Beer Watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Beer Watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		731D8BD41AD8627700BAAA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		731D8BD51AD8627700BAAA27 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -1273,6 +1279,9 @@
 				731D8BF51AD8696E00BAAA27 /* Beer.swift */,
 				731D8BF61AD8696E00BAAA27 /* SearchResult.swift */,
 				737B1C411AD9AEE70016AAAD /* Brewer.swift */,
+				731562721AD9B84500380CF1 /* Pour.swift */,
+				731562741AD9B86100380CF1 /* ApiResult.swift */,
+				731562761AD9C64D00380CF1 /* PourMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1861,7 +1870,10 @@
 			files = (
 				733EB5401AD8A18900E95DF9 /* ChooseBeerController.swift in Sources */,
 				731D8BFB1AD8697C00BAAA27 /* BeerRecommendationRepository.swift in Sources */,
+				731562751AD9B86100380CF1 /* ApiResult.swift in Sources */,
 				731D8BD91AD8627700BAAA27 /* NotificationController.swift in Sources */,
+				731562731AD9B84500380CF1 /* Pour.swift in Sources */,
+				731562771AD9C64D00380CF1 /* PourMessage.swift in Sources */,
 				731D8BFF1AD8698C00BAAA27 /* RecommendedBeersController.swift in Sources */,
 				737B1C401AD99BFA0016AAAD /* FindBeerController.swift in Sources */,
 				731D8BF71AD8696E00BAAA27 /* Beer.swift in Sources */,

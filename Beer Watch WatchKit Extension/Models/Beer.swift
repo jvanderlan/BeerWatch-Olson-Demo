@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Beer : SearchResult, AnyObject {
+class Beer : SearchResult, ApiResult, AnyObject {
     var searchScore: Double = 0.0
     var id: String = ""
     var name: String = ""

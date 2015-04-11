@@ -29,7 +29,7 @@ class RecommendedBeerRowController : NSObject {
         
     }
     
-    func setBeer(beer: Beer, showRating: Bool) {
+    func setBeer(beer: Beer,showRating: Bool) {
         self.beer = beer
         
         var beerNameAttributes = NSAttributedString(string: beer.name, attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
@@ -45,6 +45,18 @@ class RecommendedBeerRowController : NSObject {
         
         self.loadImage(beer.imageLocation, forImageView: self.beerIcon)
     }
+    
+    func setPour(pour: Pour, showRating: Bool) {
+        
+        let repo = BeerRecommendationRepository()
+        
+        repo.FindBeer(pour.beerId, completionHandler: { (result) -> () in
+            var beer = result as Beer;
+            
+            beer.rating = pour.rating
+            self.setBeer(beer, showRating: showRating)
+        })
+    }
 
     @IBAction func starOneTapped() {
         var togglingOn = beer.rating < 1
@@ -56,6 +68,9 @@ class RecommendedBeerRowController : NSObject {
         toggleStar(false, starButton: starFiveButton)
         
         beer.rating = togglingOn ? 1 : 0
+        
+        let repo = BeerRecommendationRepository()
+        repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     
     @IBAction func starTwoTapped() {
@@ -68,6 +83,9 @@ class RecommendedBeerRowController : NSObject {
         toggleStar(false, starButton: starFiveButton)
         
         beer.rating = togglingOn ? 2 : 1
+        
+        let repo = BeerRecommendationRepository()
+        repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     
     @IBAction func starThreeTapped() {
@@ -80,6 +98,9 @@ class RecommendedBeerRowController : NSObject {
         toggleStar(false, starButton: starFiveButton)
         
         beer.rating = togglingOn ? 3 : 2
+        
+        let repo = BeerRecommendationRepository()
+        repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     
     @IBAction func starFourTapped() {
@@ -92,6 +113,9 @@ class RecommendedBeerRowController : NSObject {
         toggleStar(false, starButton: starFiveButton)
         
         beer.rating = togglingOn ? 4 : 3
+        
+        let repo = BeerRecommendationRepository()
+        repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     
     @IBAction func starFiveTapped() {
@@ -104,6 +128,9 @@ class RecommendedBeerRowController : NSObject {
         toggleStar(togglingOn, starButton: starFiveButton)
         
         beer.rating = togglingOn ? 5 : 4
+        
+        let repo = BeerRecommendationRepository()
+        repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     
     func toggleStar(enabled: Bool, starButton: WKInterfaceButton) {

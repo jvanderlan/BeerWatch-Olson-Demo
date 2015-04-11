@@ -53,6 +53,78 @@ class BeerRecommendationRepository {
         })
     }
     
+    func ApiCall(pathAndQuery: String,
+                 mappingCallback: (entityResult: NSDictionary) -> SearchResult,
+                 completionHandler: (results: Array<SearchResult>) -> ())  {
+                    
+        var url = "http://localhost:3000" + pathAndQuery
+        
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "content-type")
+        
+        
+        NSURLConnection.sendAsynchronousRequest(
+            request,
+            queue: NSOperationQueue(),
+            completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+                
+                var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+                let jsonResult: NSArray! =  NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSArray
+                
+                var mappedResults = Array<SearchResult>()
+                
+                if (jsonResult != nil) {
+                    
+                    for result in jsonResult {
+                        if let entityResult = result as? NSDictionary {
+                            var mappedEntity = mappingCallback(entityResult: entityResult)
+                            
+                            mappedResults.append(mappedEntity)
+                        }
+                    }
+                    
+                } else {
+                    // couldn't load JSON, look at error
+                }
+                
+                completionHandler(results: mappedResults)
+        })
+    }
+
+    func FindAllBeers(completionHandler: (results: Array<Beer>) -> ()) {
+        
+        let query = "/api/beers"
+        
+        ApiCall(query,
+            mappingCallback: {(entityResult: NSDictionary) -> SearchResult in
+                var beer = Beer()
+                
+                beer.id = entityResult["id"] as! String;
+                beer.name = entityResult["name"] as! String;
+                beer.imageLocation = entityResult["image_url"] as! String
+                beer.style = entityResult["beerFamily"] as! String
+                
+                if let brewerEntityResult = entityResult["brewer"] as? NSDictionary {
+                    beer.brewer = Brewer()
+                    beer.brewer.name = brewerEntityResult["name"] as! String
+                    beer.brewer.locationState = brewerEntityResult["location_state"] as! String
+                    beer.brewer.locationCity = brewerEntityResult["location_city"] as! String
+                    beer.brewer.locationCountry = brewerEntityResult["location_country"] as! String
+                }
+                
+                return beer;
+            },
+            completionHandler: {(mappedResults: Array<SearchResult>) -> () in
+                var beers = Array<Beer>()
+                for m in mappedResults {
+                    beers.append(m as! Beer)
+                }
+                completionHandler(results: beers)
+            }
+        )
+    }
     
     func FindBeersLike(beerId: String, completionHandler: (results: Array<Beer>) -> ()) {
         
@@ -73,7 +145,7 @@ class BeerRecommendationRepository {
                 beer.beerFamilies = Array<String>();
                 beer.hops = Array<String>();
                 beer.flavorProfiles = Array<String>();
-                beer.brewer = searchResult["brewer"] as! String;
+                //beer.brewer = searchResult["brewer"] as! String;
                 beer.abv = searchResult["abv"] as! Double;
                 beer.ibu = searchResult["ibu"] as! Double;
                 beer.srm = searchResult["srm"] as! Double;

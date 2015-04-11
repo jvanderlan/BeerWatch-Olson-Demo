@@ -338,6 +338,7 @@
 		73753E631AD98B7D003146A3 /* the_norm.png in Resources */ = {isa = PBXBuildFile; fileRef = 73753E611AD98B7D003146A3 /* the_norm.png */; };
 		73753E641AD98B7D003146A3 /* trending.png in Resources */ = {isa = PBXBuildFile; fileRef = 73753E621AD98B7D003146A3 /* trending.png */; };
 		737B1C401AD99BFA0016AAAD /* FindBeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B1C3F1AD99BFA0016AAAD /* FindBeerController.swift */; };
+		737B1C421AD9AEE70016AAAD /* Brewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B1C411AD9AEE70016AAAD /* Brewer.swift */; };
 		738FDCF71AD9752D00B02916 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738FDCE51AD9752D00B02916 /* Roboto-Black.ttf */; };
 		738FDCF81AD9752D00B02916 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738FDCE61AD9752D00B02916 /* Roboto-BlackItalic.ttf */; };
 		738FDCF91AD9752D00B02916 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738FDCE71AD9752D00B02916 /* Roboto-Bold.ttf */; };
@@ -753,6 +754,7 @@
 		73753E611AD98B7D003146A3 /* the_norm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = the_norm.png; sourceTree = "<group>"; };
 		73753E621AD98B7D003146A3 /* trending.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trending.png; sourceTree = "<group>"; };
 		737B1C3F1AD99BFA0016AAAD /* FindBeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBeerController.swift; sourceTree = "<group>"; };
+		737B1C411AD9AEE70016AAAD /* Brewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brewer.swift; sourceTree = "<group>"; };
 		738FDCE51AD9752D00B02916 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		738FDCE61AD9752D00B02916 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		738FDCE71AD9752D00B02916 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -1270,6 +1272,7 @@
 			children = (
 				731D8BF51AD8696E00BAAA27 /* Beer.swift */,
 				731D8BF61AD8696E00BAAA27 /* SearchResult.swift */,
+				737B1C411AD9AEE70016AAAD /* Brewer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1863,6 +1866,7 @@
 				737B1C401AD99BFA0016AAAD /* FindBeerController.swift in Sources */,
 				731D8BF71AD8696E00BAAA27 /* Beer.swift in Sources */,
 				731D8BF81AD8696E00BAAA27 /* SearchResult.swift in Sources */,
+				737B1C421AD9AEE70016AAAD /* Brewer.swift in Sources */,
 				731D8BFE1AD8698C00BAAA27 /* RecommendedBeerRowController.swift in Sources */,
 				731D8BD71AD8627700BAAA27 /* InterfaceController.swift in Sources */,
 				73753E5E1AD97B87003146A3 /* Constants.swift in Sources */,

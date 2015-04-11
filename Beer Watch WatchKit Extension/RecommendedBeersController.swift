@@ -51,6 +51,7 @@ class RecommendedBeersController: WKInterfaceController {
                 
         let repo = BeerRecommendationRepository()
         
+        /*
         repo.FindBeersLike("beer_summit_saga", completionHandler: {(results: Array<Beer>) -> () in
             self.beerTable.setNumberOfRows(results.count, withRowType: "beerRow")
             
@@ -64,7 +65,22 @@ class RecommendedBeersController: WKInterfaceController {
             }
             
             self.recomendedBeers = results
-        })
+        })*/
+        
+        repo.FindAllBeers { (results) -> () in
+            self.beerTable.setNumberOfRows(results.count, withRowType: "beerRow")
+            
+            for var i = 0; i<self.beerTable.numberOfRows; i++ {
+                var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
+                var beer = results[i] as Beer
+                
+                var showRating = contextString == GlobalContants.RecommendedBeerActionType.rate
+                row.setBeer(beer, showRating: showRating)
+                
+            }
+            
+            self.recomendedBeers = results
+        }
     }
     
     override func willActivate() {

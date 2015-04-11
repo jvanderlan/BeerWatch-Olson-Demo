@@ -20,9 +20,13 @@ class Beer : SearchResult, AnyObject {
     var beerFamilies: Array<String> = []
     var hops: Array<String> = []
     var flavorProfiles: Array<String> = []
-    var brewer: String = ""
+    var brewer: Brewer
     var abv: Double = 0.0
     var ibu: Double = 0.0
     var srm: Double = 0.0
     var rating: Int = 0
+    
+    init() {
+        brewer = Brewer()
+    }
 }

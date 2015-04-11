@@ -32,13 +32,10 @@ class RecommendedBeerRowController : NSObject {
     func setBeer(beer: Beer, showRating: Bool) {
         self.beer = beer
         
-        self.beerName.setText(beer.name)
-        self.breweryName.setText(beer.brewer)
-        
         var beerNameAttributes = NSAttributedString(string: beer.name, attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
         self.beerName.setAttributedText(beerNameAttributes)
         
-        var breweryNameAttributes = NSAttributedString(string: beer.brewer, attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
+        var breweryNameAttributes = NSAttributedString(string: beer.brewer.name, attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
         self.breweryName.setAttributedText(breweryNameAttributes)
         
         var beerStyleAttributes = NSAttributedString(string: beer.style, attributes: GlobalContants.Fonts.bodyCopyBoldFontAttributes)

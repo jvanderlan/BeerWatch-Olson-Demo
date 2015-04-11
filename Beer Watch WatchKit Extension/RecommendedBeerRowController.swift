@@ -23,6 +23,7 @@ class RecommendedBeerRowController : NSObject {
     @IBOutlet weak var starFourButton: WKInterfaceButton!
     @IBOutlet weak var starFiveButton: WKInterfaceButton!
     
+    @IBOutlet weak var rowGroup: WKInterfaceGroup!
     var beer: Beer!
     
     override init() {
@@ -44,6 +45,8 @@ class RecommendedBeerRowController : NSObject {
         self.starGroup.setHidden(!showRating)
         
         self.loadImage(beer.imageLocation, forImageView: self.beerIcon)
+        
+        rowGroup.setHidden(false)
     }
     
     func setPour(pour: Pour, showRating: Bool) {

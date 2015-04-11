@@ -16,6 +16,7 @@ class RecommendedBeersController: WKInterfaceController {
     @IBOutlet weak var titleImage: WKInterfaceImage!
     
     var recomendedBeers = Array<Beer>()
+    var contextString: String = ""
     
     @IBOutlet weak var beerTable: WKInterfaceTable!
     
@@ -23,7 +24,7 @@ class RecommendedBeersController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        var contextString = context as! String
+        contextString = context as! String
         
         if (contextString == GlobalContants.RecommendedBeerActionType.trending) {
             var titleAttributes = NSAttributedString(string: "Trending", attributes: GlobalContants.Fonts.bodyCopyFontAttributes)
@@ -80,9 +81,16 @@ class RecommendedBeersController: WKInterfaceController {
     
     override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
         
-        let beer = self.recomendedBeers[rowIndex]
+        if (contextString != GlobalContants.RecommendedBeerActionType.rate) {
+            let beer = self.recomendedBeers[rowIndex]
+            
+            let repo = BeerRecommendationRepository()
+            repo.RateBeer("3", beerId: beer.id, rating: 0)
+            
+            return beer
+        }
         
-        return beer
+        return nil;
     }
     
     func loadAllBeers(contextString: String) {
@@ -112,7 +120,7 @@ class RecommendedBeersController: WKInterfaceController {
             
             for var i = 0; i<self.beerTable.numberOfRows; i++ {
                 var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
-
+                
                 var pour = results[i] as Pour
                 
                 var showRating = contextString == GlobalContants.RecommendedBeerActionType.rate

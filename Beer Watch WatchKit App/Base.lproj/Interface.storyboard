@@ -164,7 +164,7 @@
                         <table alignment="left" id="TPP-b1-zye">
                             <items>
                                 <tableRow identifier="beerRow" id="5AD-3D-pEJ" customClass="RecommendedBeerRowController" customModule="Beer_Watch_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="112.5" alignment="left" layout="vertical" id="goL-vR-ZPh" userLabel="Row Group">
+                                    <group key="rootItem" width="1" height="112.5" alignment="left" hidden="YES" layout="vertical" id="goL-vR-ZPh" userLabel="Row Group">
                                         <items>
                                             <group width="1" alignment="left" id="pOP-qw-Jpp" userLabel="Beer Group">
                                                 <items>
@@ -226,6 +226,7 @@
                                         <outlet property="beerName" destination="8Ay-r7-4m9" id="b3l-GX-Xr9"/>
                                         <outlet property="beerStyle" destination="sjj-cm-UkW" id="1xZ-Ih-qr9"/>
                                         <outlet property="breweryName" destination="N0P-d3-lLu" id="ecP-Qy-SXN"/>
+                                        <outlet property="rowGroup" destination="goL-vR-ZPh" id="HnC-Ri-2lK"/>
                                         <outlet property="starFiveButton" destination="Mxl-sk-SLK" id="0kZ-t9-UHz"/>
                                         <outlet property="starFourButton" destination="3fl-qP-SEf" id="DPU-yl-DLM"/>
                                         <outlet property="starGroup" destination="bUn-rh-o3F" id="rSi-HF-4ul"/>
@@ -318,7 +319,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="I4q-Nc-3pD"/>
+        <segue reference="qf6-X5-MRX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

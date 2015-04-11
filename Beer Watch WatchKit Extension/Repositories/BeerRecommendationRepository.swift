@@ -228,7 +228,7 @@ class BeerRecommendationRepository {
     }
     
     func RateBeer(userId: String, beerId: String, rating: Int) -> () {
-        var url = "http://localhost:3000//api/user/" + userId + "/pour/" + beerId
+        var url = "http://localhost:3000/api/user/" + userId + "/pour/" + beerId
         
         var request : NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url)

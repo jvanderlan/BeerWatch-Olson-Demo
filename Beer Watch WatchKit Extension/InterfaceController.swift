@@ -15,10 +15,17 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var outerGroup: WKInterfaceGroup!
     @IBOutlet weak var middleGroup: WKInterfaceGroup!
     @IBOutlet weak var innerGroup: WKInterfaceGroup!
+    
+    @IBOutlet weak var titleLabel: WKInterfaceLabel!
+    
     let duration = 1.0
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        var titleAttributes = NSAttributedString(string: "Cheers to beers", attributes: GlobalContants.Fonts.titleCopyFontAttributes)
+        titleLabel.setAttributedText(titleAttributes)
+        titleLabel.setTextColor(GlobalContants.Colors.tealColor)
         
         outerGroup.setBackgroundImageNamed("outerArc")
         middleGroup.setBackgroundImageNamed("middleArc")

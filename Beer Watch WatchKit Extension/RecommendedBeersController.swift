@@ -11,6 +11,8 @@ import Foundation
 
 
 class RecommendedBeersController: WKInterfaceController {
+    @IBOutlet weak var titleGroup: WKInterfaceGroup!
+    @IBOutlet weak var titleLabel: WKInterfaceLabel!
     
     var recomendedBeers = Array<Beer>()
     
@@ -19,6 +21,10 @@ class RecommendedBeersController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        var titleAttributes = NSAttributedString(string: "Rate your beers", attributes: GlobalContants.Fonts.titleCopyFontAttributes)
+        titleLabel.setAttributedText(titleAttributes)
+        titleLabel.setTextColor(GlobalContants.Colors.tealColor)
         
         let repo = BeerRecommendationRepository()
         
@@ -29,10 +35,7 @@ class RecommendedBeersController: WKInterfaceController {
                 var row = self.beerTable.rowControllerAtIndex(i) as! RecommendedBeerRowController
                 var beer = results[i] as Beer
                 
-                row.beerName.setText(beer.name)
-                row.breweryName.setText(beer.brewer)
-                
-                self.loadImage(beer.imageLocation, forImageView: row.beerIcon)
+                row.setBeer(beer)
             }
             
             self.recomendedBeers = results

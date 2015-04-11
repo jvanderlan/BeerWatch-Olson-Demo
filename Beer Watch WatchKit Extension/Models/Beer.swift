@@ -16,6 +16,7 @@ class Beer : SearchResult, AnyObject {
     var url: String = ""
     var event: String = ""
     var description: String = ""
+    var style: String = ""
     var beerFamilies: Array<String> = []
     var hops: Array<String> = []
     var flavorProfiles: Array<String> = []
@@ -23,4 +24,5 @@ class Beer : SearchResult, AnyObject {
     var abv: Double = 0.0
     var ibu: Double = 0.0
     var srm: Double = 0.0
+    var rating: Int = 0
 }

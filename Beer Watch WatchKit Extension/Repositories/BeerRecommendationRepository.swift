@@ -69,6 +69,7 @@ class BeerRecommendationRepository {
                 beer.url =  searchResult["url"] as! String;
                 beer.event = searchResult["event"] as! String;
                 beer.description = searchResult["description"] as! String;
+                beer.style = "IPA"
                 beer.beerFamilies = Array<String>();
                 beer.hops = Array<String>();
                 beer.flavorProfiles = Array<String>();

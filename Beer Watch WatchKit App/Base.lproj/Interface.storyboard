@@ -12,8 +12,10 @@
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="Say-wx-XhA" userLabel="Container">
                             <items>
-                                <label height="0.20000000000000001" alignment="center" text="Cheers to beers" textAlignment="left" id="Z7g-CT-Kid"/>
-                                <group width="1" height="0.59999999999999998" alignment="left" backgroundImage="outerArc0.png" contentMode="scaleAspectFit" id="HZR-qm-9gJ" userLabel="Outer Arc">
+                                <label height="0.20000000000000001" alignment="center" text="Cheers to beers" textAlignment="left" id="Z7g-CT-Kid">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                                <group width="1" height="0.55000000000000004" alignment="left" backgroundImage="outerArc0.png" contentMode="scaleAspectFit" layout="vertical" id="HZR-qm-9gJ" userLabel="Outer Arc">
                                     <items>
                                         <group width="1" alignment="left" backgroundImage="middleArc0.png" contentMode="scaleAspectFit" id="2Qq-kF-4gT" userLabel="Middle Arc">
                                             <items>
@@ -22,10 +24,14 @@
                                         </group>
                                     </items>
                                 </group>
-                                <group width="1" height="0.14999999999999999" alignment="left" id="fiV-DQ-dwe" userLabel="Buttons">
+                                <group width="1" height="0.20000000000000001" alignment="left" id="fiV-DQ-dwe" userLabel="Buttons">
                                     <items>
-                                        <imageView width="0.5" alignment="left" id="FfB-me-qN0" userLabel="Rate"/>
-                                        <imageView width="0.5" alignment="left" id="2E7-AF-lwk" userLabel="Pour"/>
+                                        <button width="24" height="24" alignment="left" verticalAlignment="center" backgroundImage="rate.png" id="oXa-hJ-kJ7">
+                                            <connections>
+                                                <segue destination="Cyj-uJ-RaS" kind="push" id="slL-CE-OtA"/>
+                                            </connections>
+                                        </button>
+                                        <button width="24" height="24" alignment="right" verticalAlignment="center" backgroundImage="beer.png" id="fBN-hX-bKZ"/>
                                     </items>
                                 </group>
                             </items>
@@ -35,6 +41,7 @@
                         <outlet property="innerGroup" destination="35H-e2-sSI" id="QSh-rF-y1v"/>
                         <outlet property="middleGroup" destination="2Qq-kF-4gT" id="tdz-BA-Gui"/>
                         <outlet property="outerGroup" destination="HZR-qm-9gJ" id="M3C-WA-Z7k"/>
+                        <outlet property="titleLabel" destination="Z7g-CT-Kid" id="kbF-Jf-3xA"/>
                     </connections>
                 </controller>
             </objects>
@@ -45,19 +52,67 @@
             <objects>
                 <controller id="Cyj-uJ-RaS" userLabel="Recommended Beers" customClass="RecommendedBeersController" customModule="Beer_Watch_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Rate your beers" id="5zC-R3-QsW"/>
+                        <group width="1" alignment="left" id="9YM-St-Jo6" userLabel="Title Group">
+                            <items>
+                                <label alignment="center" text="Rate your beers" id="5zC-R3-QsW">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                            </items>
+                        </group>
                         <table alignment="left" id="TPP-b1-zye">
                             <items>
                                 <tableRow identifier="beerRow" id="5AD-3D-pEJ" customClass="RecommendedBeerRowController" customModule="Beer_Watch_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="78.5" alignment="left" layout="vertical" id="goL-vR-ZPh" userLabel="Row Group">
+                                    <group key="rootItem" width="1" height="112.5" alignment="left" layout="vertical" id="goL-vR-ZPh" userLabel="Row Group">
                                         <items>
                                             <group width="1" alignment="left" id="pOP-qw-Jpp" userLabel="Beer Group">
                                                 <items>
                                                     <imageView width="0.25" height="74" alignment="left" contentMode="scaleAspectFit" id="HDp-3o-Lh0" userLabel="Beer Image"/>
                                                     <group width="1" alignment="left" layout="vertical" id="bOZ-4O-3zK">
                                                         <items>
-                                                            <label width="1" alignment="left" text="Bauhaus" textAlignment="left" id="N0P-d3-lLu"/>
-                                                            <label width="1" alignment="left" text="SKY-FIVE!" id="8Ay-r7-4m9"/>
+                                                            <label width="1" alignment="left" text="Bauhaus" textAlignment="left" id="N0P-d3-lLu">
+                                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                                            </label>
+                                                            <label width="1" alignment="left" text="SKY-FIVE!" id="8Ay-r7-4m9">
+                                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                            </label>
+                                                            <group alignment="left" id="oUF-Wg-mpc" userLabel="Style Group">
+                                                                <items>
+                                                                    <label alignment="left" text="foo" id="sjj-cm-UkW">
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                                                    </label>
+                                                                </items>
+                                                                <color key="backgroundColor" red="0.12941176470588237" green="0.75294117647058822" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </group>
+                                                            <group width="1" alignment="left" id="bUn-rh-o3F" userLabel="RatingStars">
+                                                                <items>
+                                                                    <button width="12" height="12" alignment="left" title="Button" backgroundImage="blank_star.png" id="ojp-eM-8Hw" userLabel="star 1">
+                                                                        <connections>
+                                                                            <action selector="starOneTapped" destination="5AD-3D-pEJ" id="7uk-7F-vdm"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button width="12" height="12" alignment="left" title="Button" backgroundImage="blank_star.png" id="PTk-hs-VUF" userLabel="star 2">
+                                                                        <connections>
+                                                                            <action selector="starTwoTapped" destination="5AD-3D-pEJ" id="LYn-mc-RqP"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button width="12" height="12" alignment="left" title="Button" backgroundImage="blank_star.png" id="5im-H9-bvH" userLabel="star 3">
+                                                                        <connections>
+                                                                            <action selector="starThreeTapped" destination="5AD-3D-pEJ" id="1in-qI-0dN"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button width="12" height="12" alignment="left" title="Button" backgroundImage="blank_star.png" id="3fl-qP-SEf" userLabel="star 4">
+                                                                        <connections>
+                                                                            <action selector="starFourTapped" destination="5AD-3D-pEJ" id="5XK-oE-HKn"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button width="12" height="12" alignment="left" title="Button" backgroundImage="blank_star.png" id="Mxl-sk-SLK" userLabel="star 5">
+                                                                        <connections>
+                                                                            <action selector="starFiveTapped" destination="5AD-3D-pEJ" id="z8r-So-E2v"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </items>
+                                                            </group>
                                                         </items>
                                                     </group>
                                                 </items>
@@ -67,7 +122,13 @@
                                     <connections>
                                         <outlet property="beerIcon" destination="HDp-3o-Lh0" id="j1J-Yz-Cey"/>
                                         <outlet property="beerName" destination="8Ay-r7-4m9" id="b3l-GX-Xr9"/>
+                                        <outlet property="beerStyle" destination="sjj-cm-UkW" id="1xZ-Ih-qr9"/>
                                         <outlet property="breweryName" destination="N0P-d3-lLu" id="ecP-Qy-SXN"/>
+                                        <outlet property="starFiveButton" destination="Mxl-sk-SLK" id="0kZ-t9-UHz"/>
+                                        <outlet property="starFourButton" destination="3fl-qP-SEf" id="DPU-yl-DLM"/>
+                                        <outlet property="starOneButton" destination="ojp-eM-8Hw" id="LC1-Sm-sin"/>
+                                        <outlet property="starThreeButton" destination="5im-H9-bvH" id="xoH-Jt-kdE"/>
+                                        <outlet property="starTwoButton" destination="PTk-hs-VUF" id="rQm-Yy-fEc"/>
                                         <segue destination="di6-Az-Uy5" kind="push" id="miK-oI-wpg"/>
                                     </connections>
                                 </tableRow>
@@ -76,6 +137,8 @@
                     </items>
                     <connections>
                         <outlet property="beerTable" destination="TPP-b1-zye" id="4q1-s1-ZsE"/>
+                        <outlet property="titleGroup" destination="9YM-St-Jo6" id="kGy-xB-zXF"/>
+                        <outlet property="titleLabel" destination="5zC-R3-QsW" id="uxF-h7-IlU"/>
                     </connections>
                 </controller>
             </objects>
@@ -86,17 +149,25 @@
             <objects>
                 <controller id="di6-Az-Uy5" userLabel="Choose Beer" customClass="ChooseBeerController" customModule="Beer_Watch_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="P41-Mn-c7d">
+                        <group width="1" height="1" alignment="left" layout="vertical" id="P41-Mn-c7d">
                             <items>
-                                <label alignment="left" text="Your suggested beer for your 4 o'clock happy hour is:" textAlignment="left" numberOfLines="2" id="KK7-pP-w2k"/>
-                                <label alignment="left" text="Bauhaus SKY-FIVE!" id="LFL-Xk-g0d"/>
-                                <group width="1" alignment="left" id="dsd-1p-WUp" userLabel="Beer Group">
+                                <label height="0.10000000000000001" alignment="center" text="ENJOY!" textAlignment="left" id="KK7-pP-w2k">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                                <group width="1" height="0.90000000000000002" alignment="left" verticalAlignment="center" layout="vertical" id="dsd-1p-WUp" userLabel="Beer Group">
                                     <items>
-                                        <imageView alignment="left" id="k2p-2m-N3n"/>
-                                        <group width="0.5" alignment="left" layout="vertical" id="3jJ-33-JFq" userLabel="Rate Buttons">
+                                        <group width="1" height="0.5" alignment="left" verticalAlignment="center" layout="vertical" id="Jts-fi-Nmu" userLabel="Pour Another">
                                             <items>
-                                                <button width="1" alignment="left" title="Y" id="1FI-ic-zvQ"/>
-                                                <button width="1" alignment="left" title="N" id="diL-hD-VWx"/>
+                                                <button width="24" height="24" alignment="center" backgroundImage="beer.png" id="1FI-ic-zvQ"/>
+                                                <label width="1" alignment="left" text="Pour me another" textAlignment="center" id="vnz-dM-PhZ">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="1" height="0.5" alignment="left" verticalAlignment="center" layout="vertical" id="W33-e8-HYL" userLabel="Rate">
+                                            <items>
+                                                <button width="24" height="24" alignment="center" backgroundImage="rate.png" id="diL-hD-VWx"/>
+                                                <label alignment="center" text="Rate your beers" textAlignment="center" id="mvh-A8-7VG"/>
                                             </items>
                                         </group>
                                     </items>
@@ -105,8 +176,9 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="beerImage" destination="k2p-2m-N3n" id="yWH-Jq-MbL"/>
-                        <outlet property="breweryAndBeerName" destination="LFL-Xk-g0d" id="PW4-iM-oFg"/>
+                        <outlet property="pourAnotherLabel" destination="vnz-dM-PhZ" id="BgW-hX-ahI"/>
+                        <outlet property="rateBeersLabel" destination="mvh-A8-7VG" id="wXL-SD-QM1"/>
+                        <outlet property="titleLabel" destination="KK7-pP-w2k" id="KYn-FZ-T8n"/>
                     </connections>
                 </controller>
             </objects>

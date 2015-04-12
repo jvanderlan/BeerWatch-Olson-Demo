@@ -111,7 +111,7 @@ class BeerRecommendationRepository {
                 
                 stats.pourCount = entityResult["pour_count"] as! Int;
                 
-                if let pourFamilyEntityResults = entityResult["brewer"] as? NSArray {
+                if let pourFamilyEntityResults = entityResult["families"] as? NSArray {
                     for arrayMember in pourFamilyEntityResults {
                         if let pourFamilyEntityResults = arrayMember as? NSDictionary {
                             var familyPourStat = FamilyPourStat()

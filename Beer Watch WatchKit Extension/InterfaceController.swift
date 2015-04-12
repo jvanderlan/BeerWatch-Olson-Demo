@@ -26,31 +26,37 @@ class InterfaceController: WKInterfaceController {
         outerGroup.setBackgroundImageNamed("outerArc")
         middleGroup.setBackgroundImageNamed("middleArc")
         innerGroup.setBackgroundImageNamed("innerArc")
-        
-        self.outerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,75), duration:self.duration, repeatCount: 1)
-        self.middleGroup.startAnimatingWithImagesInRange(NSMakeRange(0,50), duration:self.duration, repeatCount: 1)
-        self.innerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,25), duration:self.duration, repeatCount: 1)
-        
-        /*
+    }
+
+    override func willActivate() {
         var repo = BeerRecommendationRepository()
         
         repo.FindStats("3", completionHandler: { (result) -> () in
             
-            var outerCount:Double = 0
-            var middleCount:Double = 0
-            var innerCount:Double = 0
+            var outerRange:Int = 0
+            var middleRange:Int = 0
+            var innerRange:Int = 0
             
-            if ( result.families.count > 0 ) {
-                outerCount = (Double(result.families[0].count) / Double(result.pourCount))
-                
+            if ( result.families.count >= 1 ) {
+                var outerCount = (Double(result.families[0].count) / Double(result.pourCount))
+                outerRange = Int(round(outerCount * 100))
             }
             
-
-        })*/
-    }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
+            if ( result.families.count >= 2 ) {
+                var middleCount = (Double(result.families[1].count) / Double(result.pourCount))
+                middleRange = Int(round(middleCount * 100))
+            }
+            
+            if ( result.families.count >= 3 ) {
+                var innerCount = (Double(result.families[2].count) / Double(result.pourCount))
+                innerRange = Int(round(innerCount * 100))
+            }
+            
+            self.outerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,outerRange), duration:self.duration, repeatCount: 1)
+            self.middleGroup.startAnimatingWithImagesInRange(NSMakeRange(0,middleRange), duration:self.duration, repeatCount: 1)
+            self.innerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,innerRange), duration:self.duration, repeatCount: 1)
+        })
+        
         super.willActivate()
     }
 

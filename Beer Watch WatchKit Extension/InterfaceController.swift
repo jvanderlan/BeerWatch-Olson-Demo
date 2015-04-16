@@ -12,6 +12,7 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var arcLabelGroup: WKInterfaceGroup!
     @IBOutlet weak var outerGroup: WKInterfaceGroup!
     @IBOutlet weak var middleGroup: WKInterfaceGroup!
     @IBOutlet weak var innerGroup: WKInterfaceGroup!
@@ -37,21 +38,30 @@ class InterfaceController: WKInterfaceController {
             var middleRange:Int = 0
             var innerRange:Int = 0
             
+            var labelImage = self.createLabelImage()
+            
             if ( result.families.count >= 1 ) {
                 var outerCount = (Double(result.families[0].count) / Double(result.pourCount))
                 outerRange = Int(round(outerCount * 100))
+                
+                labelImage = self.drawImageText(result.families[0].family, inImage: labelImage, atPoint: CGPoint(x: -110, y: 0))
             }
             
             if ( result.families.count >= 2 ) {
                 var middleCount = (Double(result.families[1].count) / Double(result.pourCount))
                 middleRange = Int(round(middleCount * 100))
+                
+                labelImage = self.drawImageText(result.families[1].family, inImage: labelImage, atPoint: CGPoint(x: -110, y: 20))
             }
             
             if ( result.families.count >= 3 ) {
                 var innerCount = (Double(result.families[2].count) / Double(result.pourCount))
                 innerRange = Int(round(innerCount * 100))
+                
+                labelImage = self.drawImageText(result.families[2].family, inImage: labelImage, atPoint: CGPoint(x: -110, y: 40))
             }
             
+            self.arcLabelGroup.setBackgroundImage(labelImage)
             self.outerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,outerRange), duration:self.duration, repeatCount: 1)
             self.middleGroup.startAnimatingWithImagesInRange(NSMakeRange(0,middleRange), duration:self.duration, repeatCount: 1)
             self.innerGroup.startAnimatingWithImagesInRange(NSMakeRange(0,innerRange), duration:self.duration, repeatCount: 1)
@@ -70,7 +80,52 @@ class InterfaceController: WKInterfaceController {
         return GlobalContants.RecommendedBeerActionType.rate
     }
     
-
+    func createLabelImage() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(200, 200), false, 0.0);
+        
+        var blank = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        return blank
+    }
     
+
+    func drawImageText(drawText:String, inImage: UIImage, atPoint:CGPoint) -> UIImage {
+        // Setup the font specific variables
+        var textColor: UIColor = UIColor.whiteColor()
+        var textFont: UIFont = GlobalContants.Fonts.bodyCopy
+        
+        //Setup the image context using the passed image.
+        UIGraphicsBeginImageContext(inImage.size)
+        
+        let paragraphStyle = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
+        paragraphStyle.alignment = NSTextAlignment.Right
+        
+        //Setups up the font attributes that will be later used to dictate how the text should be drawn
+        let textFontAttributes = [
+            NSFontAttributeName: textFont,
+            NSForegroundColorAttributeName: textColor,
+            NSParagraphStyleAttributeName: paragraphStyle
+        ]
+        
+        //Put the image into a rectangle as large as the original image.
+        inImage.drawInRect(CGRectMake(0, 0, inImage.size.width, inImage.size.height))
+        
+        // Creating a point within the space that is as bit as the image.
+        var rect: CGRect = CGRectMake(atPoint.x, atPoint.y, inImage.size.width, inImage.size.height)
+        
+        //Now Draw the text into an image.
+        drawText.drawInRect(rect, withAttributes: textFontAttributes)
+        
+        // Create a new image out of the images we have created
+        var newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        // End the context now that we have the image we need
+        UIGraphicsEndImageContext()
+        
+        //And pass it back up to the caller.
+        return newImage
+    }
 
 }

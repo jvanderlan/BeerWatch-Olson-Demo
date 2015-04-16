@@ -35,7 +35,11 @@
                                     <items>
                                         <group width="1" alignment="left" backgroundImage="middleArc0.png" contentMode="scaleAspectFit" id="2Qq-kF-4gT" userLabel="Middle Arc">
                                             <items>
-                                                <group width="1" height="1" alignment="left" backgroundImage="innerArc0.png" contentMode="scaleAspectFit" id="35H-e2-sSI" userLabel="Inner Arc"/>
+                                                <group width="1" alignment="left" backgroundImage="innerArc0.png" contentMode="scaleAspectFit" id="35H-e2-sSI" userLabel="Inner Arc">
+                                                    <items>
+                                                        <group width="1" height="1" alignment="left" id="JAK-w0-lOb" userLabel="Arc Labels"/>
+                                                    </items>
+                                                </group>
                                             </items>
                                         </group>
                                     </items>
@@ -66,6 +70,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="arcLabelGroup" destination="JAK-w0-lOb" id="Ss1-ZL-drl"/>
                         <outlet property="innerGroup" destination="35H-e2-sSI" id="QSh-rF-y1v"/>
                         <outlet property="middleGroup" destination="2Qq-kF-4gT" id="tdz-BA-Gui"/>
                         <outlet property="outerGroup" destination="HZR-qm-9gJ" id="M3C-WA-Z7k"/>
@@ -319,7 +324,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qf6-X5-MRX"/>
+        <segue reference="BPc-a2-kHB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

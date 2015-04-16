@@ -57,7 +57,7 @@ class RecommendedBeerRowController : NSObject {
     
     func setPour(pour: Pour, showRating: Bool) {
         
-        let repo = BeerRecommendationRepository()
+        let repo = RepositoryFactory.beerRecommendationRepository()
         
         repo.FindBeer(pour.beerId, completionHandler: { (result) -> () in
             var beer = result as Beer;
@@ -78,7 +78,7 @@ class RecommendedBeerRowController : NSObject {
         
         beer.rating = togglingOn ? 1 : 0
         
-        let repo = BeerRecommendationRepository()
+        let repo = RepositoryFactory.activityRepository()
         repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     
@@ -93,7 +93,7 @@ class RecommendedBeerRowController : NSObject {
         
         beer.rating = togglingOn ? 2 : 1
         
-        let repo = BeerRecommendationRepository()
+        let repo = RepositoryFactory.activityRepository()
         repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     
@@ -108,7 +108,7 @@ class RecommendedBeerRowController : NSObject {
         
         beer.rating = togglingOn ? 3 : 2
         
-        let repo = BeerRecommendationRepository()
+        let repo = RepositoryFactory.activityRepository()
         repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     
@@ -123,7 +123,7 @@ class RecommendedBeerRowController : NSObject {
         
         beer.rating = togglingOn ? 4 : 3
         
-        let repo = BeerRecommendationRepository()
+        let repo = RepositoryFactory.activityRepository()
         repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     
@@ -138,7 +138,7 @@ class RecommendedBeerRowController : NSObject {
         
         beer.rating = togglingOn ? 5 : 4
         
-        let repo = BeerRecommendationRepository()
+        let repo = RepositoryFactory.activityRepository()
         repo.RateBeer("3", beerId: beer.id, rating: beer.rating)
     }
     

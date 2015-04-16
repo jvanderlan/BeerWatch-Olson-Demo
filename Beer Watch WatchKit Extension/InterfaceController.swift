@@ -29,7 +29,7 @@ class InterfaceController: WKInterfaceController {
     }
 
     override func willActivate() {
-        var repo = BeerRecommendationRepository()
+        var repo = RepositoryFactory.activityRepository()
         
         repo.FindStats("3", completionHandler: { (result) -> () in
             

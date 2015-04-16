@@ -84,7 +84,7 @@ class RecommendedBeersController: WKInterfaceController {
         if (contextString != GlobalContants.RecommendedBeerActionType.rate) {
             let beer = self.recomendedBeers[rowIndex]
             
-            let repo = BeerRecommendationRepository()
+            let repo = RepositoryFactory.activityRepository()
             repo.RateBeer("3", beerId: beer.id, rating: 0)
             
             return beer
@@ -94,7 +94,7 @@ class RecommendedBeersController: WKInterfaceController {
     }
     
     func loadAllBeers(contextString: String) {
-        let repo = BeerRecommendationRepository()
+        let repo = RepositoryFactory.beerRecommendationRepository()
         
         repo.FindAllBeers { (results) -> () in
             self.beerTable.setNumberOfRows(results.count, withRowType: "beerRow")
@@ -113,7 +113,7 @@ class RecommendedBeersController: WKInterfaceController {
     
     
     func loadPours(contextString: String) {
-        let repo = BeerRecommendationRepository()
+        let repo = RepositoryFactory.activityRepository()
         
         repo.FindPours("3", completionHandler: { (results) -> () in
             self.beerTable.setNumberOfRows(results.count, withRowType: "beerRow")

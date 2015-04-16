@@ -30,19 +30,4 @@ class ChooseBeerController : WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
-    func loadImage(url:String, forImageView: WKInterfaceImage) {
-        // load image
-        let image_url:String = url
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let url:NSURL = NSURL(string:image_url)!
-            var data:NSData = NSData(contentsOfURL: url)!
-            var placeholder = UIImage(data: data)!
-            
-            // update ui
-            dispatch_async(dispatch_get_main_queue()) {
-                forImageView.setImage(placeholder)
-            }
-        }
-    }
 }

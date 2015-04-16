@@ -75,6 +75,18 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
+        if ( identifier == "dashboard" ) {
+            
+        }
+    }
+    
+    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
+        if ( identifier == GlobalContants.NotificationActions.recommendBeers ) {
+            pushControllerWithName("RecommendedBeers", context: GlobalContants.RecommendedBeerActionType.trending)
+        }
+    }
+    
     override func contextForSegueWithIdentifier(segueIdentifier: String) -> AnyObject? {
         
         return GlobalContants.RecommendedBeerActionType.rate

@@ -9,7 +9,11 @@
     
     "WatchKit Simulator Actions": [
         {
-            "title": "Happy hour starts",
+            "title": "Beer Me!",
+            "identifier": "recommendBeers"
+        },
+        {
+            "title": "Dashboard",
             "identifier": "dashboard"
         }
     ],

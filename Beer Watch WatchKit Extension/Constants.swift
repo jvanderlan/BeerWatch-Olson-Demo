@@ -26,6 +26,10 @@ struct GlobalContants {
         static let titleCopyFontAttributes = [NSFontAttributeName : titleCopy]
     }
     
+    struct NotificationActions {
+        static let recommendBeers = "recommendBeers"
+    }
+    
     struct RecommendedBeerActionType {
         static let rate = "rate"
         static let trending = "trending"

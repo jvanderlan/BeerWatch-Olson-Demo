@@ -44,21 +44,21 @@ class InterfaceController: WKInterfaceController {
                 var outerCount = (Double(result.families[0].count) / Double(result.pourCount))
                 outerRange = Int(round(outerCount * 100))
                 
-                labelImage = self.drawImageText(result.families[0].family, inImage: labelImage, atPoint: CGPoint(x: -110, y: 0))
+                labelImage = self.drawImageText(result.families[0].family, inImage: labelImage, atPoint: CGPoint(x: -125, y: -3))
             }
             
             if ( result.families.count >= 2 ) {
                 var middleCount = (Double(result.families[1].count) / Double(result.pourCount))
                 middleRange = Int(round(middleCount * 100))
-                
-                labelImage = self.drawImageText(result.families[1].family, inImage: labelImage, atPoint: CGPoint(x: -110, y: 20))
+            
+                labelImage = self.drawImageText(result.families[1].family, inImage: labelImage, atPoint: CGPoint(x: -125, y: 10))
             }
             
             if ( result.families.count >= 3 ) {
                 var innerCount = (Double(result.families[2].count) / Double(result.pourCount))
                 innerRange = Int(round(innerCount * 100))
                 
-                labelImage = self.drawImageText(result.families[2].family, inImage: labelImage, atPoint: CGPoint(x: -110, y: 40))
+                labelImage = self.drawImageText(result.families[2].family, inImage: labelImage, atPoint: CGPoint(x: -125, y: 22))
             }
             
             self.arcLabelGroup.setBackgroundImage(labelImage)
@@ -81,7 +81,9 @@ class InterfaceController: WKInterfaceController {
     }
     
     func createLabelImage() -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(200, 200), false, 0.0);
+        
+        
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(225, 124), false, 0.0);
         
         var blank = UIGraphicsGetImageFromCurrentImageContext();
         

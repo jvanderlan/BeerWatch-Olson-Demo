@@ -339,6 +339,9 @@
 		732E483B1ADF63380002ED48 /* ActivityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732E483A1ADF63380002ED48 /* ActivityRepository.swift */; };
 		732E483D1ADF63630002ED48 /* ActivityApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732E483C1ADF63630002ED48 /* ActivityApiRepository.swift */; };
 		732E483F1ADF66000002ED48 /* BeerWatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732E483E1ADF66000002ED48 /* BeerWatchRepository.swift */; };
+		7335120A1AE084AD00B11BE0 /* appicon_48_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 733512091AE084AD00B11BE0 /* appicon_48_48.png */; };
+		7335120C1AE0850900B11BE0 /* appicon_55_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 7335120B1AE0850900B11BE0 /* appicon_55_55.png */; };
+		7335120E1AE086D100B11BE0 /* appicon_72_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7335120D1AE086D100B11BE0 /* appicon_72_72.png */; };
 		733EB5401AD8A18900E95DF9 /* ChooseBeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733EB53F1AD8A18900E95DF9 /* ChooseBeerController.swift */; };
 		73561B191ADF714900067B48 /* ActivityMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73561B181ADF714900067B48 /* ActivityMockRepository.swift */; };
 		73561B1B1ADF774500067B48 /* BeerRecommendationMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73561B1A1ADF774500067B48 /* BeerRecommendationMockRepository.swift */; };
@@ -766,6 +769,9 @@
 		732E483A1ADF63380002ED48 /* ActivityRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRepository.swift; sourceTree = "<group>"; };
 		732E483C1ADF63630002ED48 /* ActivityApiRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityApiRepository.swift; sourceTree = "<group>"; };
 		732E483E1ADF66000002ED48 /* BeerWatchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerWatchRepository.swift; sourceTree = "<group>"; };
+		733512091AE084AD00B11BE0 /* appicon_48_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_48_48.png; sourceTree = "<group>"; };
+		7335120B1AE0850900B11BE0 /* appicon_55_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_55_55.png; sourceTree = "<group>"; };
+		7335120D1AE086D100B11BE0 /* appicon_72_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_72_72.png; sourceTree = "<group>"; };
 		733EB53F1AD8A18900E95DF9 /* ChooseBeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBeerController.swift; sourceTree = "<group>"; };
 		73561B181ADF714900067B48 /* ActivityMockRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityMockRepository.swift; sourceTree = "<group>"; };
 		73561B1A1ADF774500067B48 /* BeerRecommendationMockRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerRecommendationMockRepository.swift; sourceTree = "<group>"; };
@@ -1227,6 +1233,9 @@
 		7305DB941AD8DE2A003A9621 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				7335120D1AE086D100B11BE0 /* appicon_72_72.png */,
+				7335120B1AE0850900B11BE0 /* appicon_55_55.png */,
+				733512091AE084AD00B11BE0 /* appicon_48_48.png */,
 				73753E611AD98B7D003146A3 /* the_norm.png */,
 				73753E621AD98B7D003146A3 /* trending.png */,
 				73753E5F1AD98B75003146A3 /* adventerous.png */,
@@ -1687,6 +1696,7 @@
 				7305DB5F1AD8D891003A9621 /* outerArc51.png in Resources */,
 				7305D9D61AD8D87D003A9621 /* innerArc63.png in Resources */,
 				731D8BE91AD8627800BAAA27 /* Images.xcassets in Resources */,
+				7335120A1AE084AD00B11BE0 /* appicon_48_48.png in Resources */,
 				7305D99D1AD8D87D003A9621 /* innerArc11.png in Resources */,
 				7305DA9F1AD8D886003A9621 /* middleArc61.png in Resources */,
 				7305DAA01AD8D886003A9621 /* middleArc62.png in Resources */,
@@ -1840,6 +1850,7 @@
 				7305DAAD1AD8D886003A9621 /* middleArc74.png in Resources */,
 				7305DA9D1AD8D886003A9621 /* middleArc6.png in Resources */,
 				7305DB3E1AD8D891003A9621 /* outerArc21.png in Resources */,
+				7335120C1AE0850900B11BE0 /* appicon_55_55.png in Resources */,
 				7305DB481AD8D891003A9621 /* outerArc30.png in Resources */,
 				7305D9E21AD8D87D003A9621 /* innerArc74.png in Resources */,
 				7305DB3B1AD8D891003A9621 /* outerArc19.png in Resources */,
@@ -1850,6 +1861,7 @@
 				7305DB881AD8D891003A9621 /* outerArc89.png in Resources */,
 				7305DB8A1AD8D891003A9621 /* outerArc90.png in Resources */,
 				7305DA9E1AD8D886003A9621 /* middleArc60.png in Resources */,
+				7335120E1AE086D100B11BE0 /* appicon_72_72.png in Resources */,
 				7305D9C11AD8D87D003A9621 /* innerArc44.png in Resources */,
 				7305D9C41AD8D87D003A9621 /* innerArc47.png in Resources */,
 				7305DB5D1AD8D891003A9621 /* outerArc5.png in Resources */,

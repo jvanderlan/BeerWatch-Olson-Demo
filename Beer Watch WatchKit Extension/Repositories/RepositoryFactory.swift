@@ -24,6 +24,14 @@ class RepositoryFactory {
     }
     
     
+    /**
+     * Returns the Event Repository
+     **/
+    static func eventRepository() -> EventRepository {
+        //return EventApiRepository()
+        return EventMockRepository()
+    }
+    
     
     /**
      * Returns the beer recommendation repository

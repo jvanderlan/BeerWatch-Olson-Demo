@@ -342,6 +342,7 @@
 		7335120A1AE084AD00B11BE0 /* appicon_48_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 733512091AE084AD00B11BE0 /* appicon_48_48.png */; };
 		7335120C1AE0850900B11BE0 /* appicon_55_55.png in Resources */ = {isa = PBXBuildFile; fileRef = 7335120B1AE0850900B11BE0 /* appicon_55_55.png */; };
 		7335120E1AE086D100B11BE0 /* appicon_72_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7335120D1AE086D100B11BE0 /* appicon_72_72.png */; };
+		733512101AE0882F00B11BE0 /* GlanceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7335120F1AE0882F00B11BE0 /* GlanceInterfaceController.swift */; };
 		733EB5401AD8A18900E95DF9 /* ChooseBeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733EB53F1AD8A18900E95DF9 /* ChooseBeerController.swift */; };
 		73561B191ADF714900067B48 /* ActivityMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73561B181ADF714900067B48 /* ActivityMockRepository.swift */; };
 		73561B1B1ADF774500067B48 /* BeerRecommendationMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73561B1A1ADF774500067B48 /* BeerRecommendationMockRepository.swift */; };
@@ -387,6 +388,10 @@
 		738FDD2B1AD9753D00B02916 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738FDD191AD9753D00B02916 /* RobotoCondensed-Light.ttf */; };
 		738FDD2C1AD9753D00B02916 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738FDD1A1AD9753D00B02916 /* RobotoCondensed-LightItalic.ttf */; };
 		738FDD2D1AD9753D00B02916 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738FDD1B1AD9753D00B02916 /* RobotoCondensed-Regular.ttf */; };
+		73B05ABB1AE08DF7009E8185 /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B05ABA1AE08DF7009E8185 /* EventRepository.swift */; };
+		73B05ABD1AE08E14009E8185 /* EventMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B05ABC1AE08E14009E8185 /* EventMockRepository.swift */; };
+		73B05ABF1AE08E20009E8185 /* EventApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B05ABE1AE08E20009E8185 /* EventApiRepository.swift */; };
+		73B05AC11AE08E6E009E8185 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B05AC01AE08E6E009E8185 /* Event.swift */; };
 		73E8A02B1AD9D1370012FF9E /* PourStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E8A02A1AD9D1370012FF9E /* PourStats.swift */; };
 		73E8A02D1AD9D17B0012FF9E /* FamilyPourStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E8A02C1AD9D17B0012FF9E /* FamilyPourStat.swift */; };
 /* End PBXBuildFile section */
@@ -772,6 +777,7 @@
 		733512091AE084AD00B11BE0 /* appicon_48_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_48_48.png; sourceTree = "<group>"; };
 		7335120B1AE0850900B11BE0 /* appicon_55_55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_55_55.png; sourceTree = "<group>"; };
 		7335120D1AE086D100B11BE0 /* appicon_72_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_72_72.png; sourceTree = "<group>"; };
+		7335120F1AE0882F00B11BE0 /* GlanceInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceInterfaceController.swift; sourceTree = "<group>"; };
 		733EB53F1AD8A18900E95DF9 /* ChooseBeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBeerController.swift; sourceTree = "<group>"; };
 		73561B181ADF714900067B48 /* ActivityMockRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityMockRepository.swift; sourceTree = "<group>"; };
 		73561B1A1ADF774500067B48 /* BeerRecommendationMockRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerRecommendationMockRepository.swift; sourceTree = "<group>"; };
@@ -817,6 +823,10 @@
 		738FDD191AD9753D00B02916 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		738FDD1A1AD9753D00B02916 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		738FDD1B1AD9753D00B02916 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		73B05ABA1AE08DF7009E8185 /* EventRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
+		73B05ABC1AE08E14009E8185 /* EventMockRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMockRepository.swift; sourceTree = "<group>"; };
+		73B05ABE1AE08E20009E8185 /* EventApiRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventApiRepository.swift; sourceTree = "<group>"; };
+		73B05AC01AE08E6E009E8185 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		73E8A02A1AD9D1370012FF9E /* PourStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PourStats.swift; sourceTree = "<group>"; };
 		73E8A02C1AD9D17B0012FF9E /* FamilyPourStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyPourStat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1250,18 +1260,19 @@
 		731D8BD21AD8627700BAAA27 /* Beer Watch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				738FDD091AD9753D00B02916 /* Fonts */,
 				733EB53F1AD8A18900E95DF9 /* ChooseBeerController.swift */,
+				73753E5D1AD97B87003146A3 /* Constants.swift */,
+				737B1C3F1AD99BFA0016AAAD /* FindBeerController.swift */,
+				738FDD091AD9753D00B02916 /* Fonts */,
+				7335120F1AE0882F00B11BE0 /* GlanceInterfaceController.swift */,
+				731D8BDA1AD8627700BAAA27 /* Images.xcassets */,
+				731D8BD61AD8627700BAAA27 /* InterfaceController.swift */,
+				731D8BF41AD8696E00BAAA27 /* Models */,
+				731D8BD81AD8627700BAAA27 /* NotificationController.swift */,
 				731D8BFC1AD8698C00BAAA27 /* RecommendedBeerRowController.swift */,
 				731D8BFD1AD8698C00BAAA27 /* RecommendedBeersController.swift */,
 				731D8BF91AD8697C00BAAA27 /* Repositories */,
-				731D8BF41AD8696E00BAAA27 /* Models */,
-				731D8BD61AD8627700BAAA27 /* InterfaceController.swift */,
-				731D8BD81AD8627700BAAA27 /* NotificationController.swift */,
-				731D8BDA1AD8627700BAAA27 /* Images.xcassets */,
 				731D8BD31AD8627700BAAA27 /* Supporting Files */,
-				73753E5D1AD97B87003146A3 /* Constants.swift */,
-				737B1C3F1AD99BFA0016AAAD /* FindBeerController.swift */,
 			);
 			path = "Beer Watch WatchKit Extension";
 			sourceTree = "<group>";
@@ -1301,13 +1312,14 @@
 		731D8BF41AD8696E00BAAA27 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				731D8BF51AD8696E00BAAA27 /* Beer.swift */,
-				731D8BF61AD8696E00BAAA27 /* SearchResult.swift */,
-				737B1C411AD9AEE70016AAAD /* Brewer.swift */,
-				731562721AD9B84500380CF1 /* Pour.swift */,
 				731562741AD9B86100380CF1 /* ApiResult.swift */,
-				73E8A02A1AD9D1370012FF9E /* PourStats.swift */,
+				731D8BF51AD8696E00BAAA27 /* Beer.swift */,
+				737B1C411AD9AEE70016AAAD /* Brewer.swift */,
+				73B05AC01AE08E6E009E8185 /* Event.swift */,
 				73E8A02C1AD9D17B0012FF9E /* FamilyPourStat.swift */,
+				731562721AD9B84500380CF1 /* Pour.swift */,
+				73E8A02A1AD9D1370012FF9E /* PourStats.swift */,
+				731D8BF61AD8696E00BAAA27 /* SearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1322,6 +1334,9 @@
 				73561B1A1ADF774500067B48 /* BeerRecommendationMockRepository.swift */,
 				732E48381ADF5F880002ED48 /* BeerRecommendationRepository.swift */,
 				732E483E1ADF66000002ED48 /* BeerWatchRepository.swift */,
+				73B05ABE1AE08E20009E8185 /* EventApiRepository.swift */,
+				73B05ABC1AE08E14009E8185 /* EventMockRepository.swift */,
+				73B05ABA1AE08DF7009E8185 /* EventRepository.swift */,
 				732E48361ADF5CDA0002ED48 /* RepositoryFactory.swift */,
 			);
 			path = Repositories;
@@ -1905,6 +1920,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				733EB5401AD8A18900E95DF9 /* ChooseBeerController.swift in Sources */,
+				73B05ABD1AE08E14009E8185 /* EventMockRepository.swift in Sources */,
 				731D8BFB1AD8697C00BAAA27 /* BeerRecommendationApiRepository.swift in Sources */,
 				73E8A02B1AD9D1370012FF9E /* PourStats.swift in Sources */,
 				731562751AD9B86100380CF1 /* ApiResult.swift in Sources */,
@@ -1913,11 +1929,14 @@
 				731D8BFF1AD8698C00BAAA27 /* RecommendedBeersController.swift in Sources */,
 				737B1C401AD99BFA0016AAAD /* FindBeerController.swift in Sources */,
 				732E483D1ADF63630002ED48 /* ActivityApiRepository.swift in Sources */,
+				73B05AC11AE08E6E009E8185 /* Event.swift in Sources */,
 				732E48371ADF5CDA0002ED48 /* RepositoryFactory.swift in Sources */,
+				73B05ABB1AE08DF7009E8185 /* EventRepository.swift in Sources */,
 				731D8BF71AD8696E00BAAA27 /* Beer.swift in Sources */,
 				732E483F1ADF66000002ED48 /* BeerWatchRepository.swift in Sources */,
 				731D8BF81AD8696E00BAAA27 /* SearchResult.swift in Sources */,
 				737B1C421AD9AEE70016AAAD /* Brewer.swift in Sources */,
+				733512101AE0882F00B11BE0 /* GlanceInterfaceController.swift in Sources */,
 				731D8BFE1AD8698C00BAAA27 /* RecommendedBeerRowController.swift in Sources */,
 				732E48391ADF5F880002ED48 /* BeerRecommendationRepository.swift in Sources */,
 				731D8BD71AD8627700BAAA27 /* InterfaceController.swift in Sources */,
@@ -1926,6 +1945,7 @@
 				73753E5E1AD97B87003146A3 /* Constants.swift in Sources */,
 				73E8A02D1AD9D17B0012FF9E /* FamilyPourStat.swift in Sources */,
 				732E483B1ADF63380002ED48 /* ActivityRepository.swift in Sources */,
+				73B05ABF1AE08E20009E8185 /* EventApiRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

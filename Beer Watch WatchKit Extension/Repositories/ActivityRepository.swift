@@ -31,5 +31,5 @@ protocol ActivityRepository {
     /**
      * Finds a user's stats
      **/
-    func FindStats(userId: String, completionHandler: (results: PourStats) -> ())
+    func FindStats(userId: String, completionHandler: (results: PourStats) -> ()) -> ()
 }

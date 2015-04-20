@@ -83,6 +83,7 @@ class InterfaceController: WKInterfaceController {
     
     override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
         if ( identifier == GlobalContants.NotificationActions.recommendBeers ) {
+            pushControllerWithName("FindBeers", context: nil)
             pushControllerWithName("RecommendedBeers", context: GlobalContants.RecommendedBeerActionType.trending)
         }
     }

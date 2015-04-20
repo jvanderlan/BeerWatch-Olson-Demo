@@ -19,8 +19,8 @@ class RepositoryFactory {
      * Returns the Activity Repostiory
      **/
     static func activityRepository() -> ActivityRepository {
-        //return ActivityApiRepository()
-        return ActivityMockRepository()
+        return ActivityApiRepository()
+        //return ActivityMockRepository()
     }
     
     
@@ -28,8 +28,8 @@ class RepositoryFactory {
      * Returns the Event Repository
      **/
     static func eventRepository() -> EventRepository {
-        //return EventApiRepository()
-        return EventMockRepository()
+        return EventApiRepository()
+        //return EventMockRepository()
     }
     
     
@@ -37,8 +37,8 @@ class RepositoryFactory {
      * Returns the beer recommendation repository
      **/
     static func beerRecommendationRepository() -> BeerRecommendationRepository {
-        //return BeerRecommendationApiRepository()
-        return BeerRecommendationMockRepository()
+        return BeerRecommendationApiRepository()
+        //return BeerRecommendationMockRepository()
     }
     
 }

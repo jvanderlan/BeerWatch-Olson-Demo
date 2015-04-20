@@ -26,6 +26,7 @@ class GlanceInterfaceController : WKInterfaceController {
             self.countdownTimer.setDate(result.startDate)
             self.countdownTimer.start()
             
+            
             // This method is called when watch view controller is about to be visible to user
             super.willActivate()
         })

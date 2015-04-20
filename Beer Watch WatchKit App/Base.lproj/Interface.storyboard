@@ -83,7 +83,7 @@
         <!--Find Beer-->
         <scene sceneID="iXy-JZ-sDB">
             <objects>
-                <controller id="6Yj-Il-upA" userLabel="Find Beer" customClass="FindBeerController" customModule="Beer_Watch_WatchKit_Extension">
+                <controller identifier="FindBeers" id="6Yj-Il-upA" userLabel="Find Beer" customClass="FindBeerController" customModule="Beer_Watch_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="How dould you like to search for a new beer?" textAlignment="left" numberOfLines="2" id="Nxg-z3-iFZ">
                             <color key="textColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -322,17 +322,18 @@
                     <items>
                         <group alignment="left" id="Y5k-4p-FU5">
                             <items>
-                                <group width="0.050000000000000003" alignment="left" id="9Xq-tS-WNF"/>
                                 <imageView width="40" height="40" alignment="left" image="beer" id="oCX-lj-ScZ"/>
                             </items>
                         </group>
                         <group alignment="left" layout="vertical" id="nP8-PN-mUS">
                             <items>
-                                <timer width="1" alignment="left" id="qYk-1c-6uM">
+                                <timer alignment="left" textAlignment="left" id="qYk-1c-6uM">
+                                    <color key="textColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </timer>
                                 <label alignment="left" text="UNTIL GO TIME" id="NX5-3c-jM1">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                    <color key="textColor" red="0.12941176469999999" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                 </label>
                                 <label alignment="left" text="Visit the 7th floor bar and grab an IPA" numberOfLines="2" id="1QG-Z9-1mM">
                                     <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
@@ -356,7 +357,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BPc-a2-kHB"/>
+        <segue reference="qf6-X5-MRX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
